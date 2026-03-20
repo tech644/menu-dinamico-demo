@@ -12,7 +12,7 @@ export function AppFooter() {
         </div>
 
         <div className="text-xs text-white/80 md:text-right">
-          <p>v1.0.0</p>
+          <p>v1.5.0</p>
           <p>© Ordinoo SRL. All rights reserved.</p>
         </div>
       </div>
