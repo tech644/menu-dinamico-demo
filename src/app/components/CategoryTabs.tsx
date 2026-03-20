@@ -33,39 +33,41 @@ export function CategoryTabs({
 
   return (
     <div className="sticky top-20 z-40 border-b border-[#e8e0f4] bg-white/95 backdrop-blur-md">
-      <div
-        ref={scrollContainerRef}
-        className="flex gap-2 overflow-x-auto px-4 py-2 scrollbar-hide"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-      >
-        {leadingActionLabel && onLeadingActionClick && (
-          <button
-            onClick={onLeadingActionClick}
-            className="bg-white text-[#4a3f63] border border-[#d7caec] hover:border-[#9f86d7] px-6 py-2 rounded-full whitespace-nowrap font-medium text-sm transition-all"
-          >
-            {leadingActionLabel}
-          </button>
-        )}
-
-        {categories.map((category) => {
-          const isActive = category === activeCategory;
-          return (
+      <div className="mx-auto w-full max-w-7xl px-4">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-2 overflow-x-auto py-2 scrollbar-hide"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {leadingActionLabel && onLeadingActionClick && (
             <button
-              key={category}
-              ref={isActive ? activeButtonRef : null}
-              onClick={() => onCategoryChange(category)}
-              className={`
-                px-6 py-2 rounded-full whitespace-nowrap font-medium text-sm transition-all
-                ${isActive 
-                  ? 'text-white shadow-md ord-cta' 
-                  : 'bg-white text-[#4a3f63] border border-[#d7caec] hover:border-[#9f86d7]'
-                }
-              `}
+              onClick={onLeadingActionClick}
+              className="rounded-full border border-[#d7caec] bg-white px-6 py-2 text-sm font-medium whitespace-nowrap text-[#4a3f63] transition-all hover:border-[#9f86d7]"
             >
-              {category}
+              {leadingActionLabel}
             </button>
-          );
-        })}
+          )}
+
+          {categories.map((category) => {
+            const isActive = category === activeCategory;
+            return (
+              <button
+                key={category}
+                ref={isActive ? activeButtonRef : null}
+                onClick={() => onCategoryChange(category)}
+                className={`
+                  px-6 py-2 rounded-full whitespace-nowrap font-medium text-sm transition-all
+                  ${isActive 
+                    ? 'text-white shadow-md ord-cta' 
+                    : 'bg-white text-[#4a3f63] border border-[#d7caec] hover:border-[#9f86d7]'
+                  }
+                `}
+              >
+                {category}
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

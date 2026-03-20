@@ -19,12 +19,12 @@ import {
   AlertCircle,
   ChevronRight,
   ChefHat,
-  Info,
   List,
   Loader2,
   MapPin,
   Menu as MenuIcon,
   Phone,
+  Search,
   Share2,
   ShieldAlert,
 } from "lucide-react";
@@ -46,13 +46,14 @@ import {
 } from "../components/ui/select";
 import { useIsMobile } from "../components/ui/use-mobile";
 import { getRecipeImageUrl } from "../utils/recipeImage";
+import { Input } from "../components/ui/input";
 
 const LANGUAGE_OPTIONS: Array<{ value: SupportedLanguage; label: string; flag: string }> = [
-  { value: "it", label: "IT", flag: "🇮🇹" },
-  { value: "en", label: "EN", flag: "🇬🇧" },
-  { value: "es", label: "ES", flag: "🇪🇸" },
-  { value: "fr", label: "FR", flag: "🇫🇷" },
-  { value: "de", label: "DE", flag: "🇩🇪" },
+  { value: "it", label: "Italiano", flag: "🇮🇹" },
+  { value: "en", label: "English", flag: "🇬🇧" },
+  { value: "es", label: "Español", flag: "🇪🇸" },
+  { value: "fr", label: "Français", flag: "🇫🇷" },
+  { value: "de", label: "Deutsch", flag: "🇩🇪" },
 ];
 
 const UI_LABELS: Record<
@@ -125,8 +126,9 @@ export default function MenuDetail() {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [mobileSheet, setMobileSheet] = useState<
-    "categories" | "allergens" | "contacts" | "share" | null
+    "categories" | "search" | "allergens" | "contacts" | "share" | null
   >(null);
+  const [searchQuery, setSearchQuery] = useState("");
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
   const isScrollingProgrammatically = useRef(false);
   const isMobile = useIsMobile();
@@ -303,6 +305,29 @@ export default function MenuDetail() {
     }
     return getAllergensInfo(Array.from(allergenIds));
   }, [effectiveRecipes]);
+
+  const recipeCategoryMap = useMemo(() => {
+    const map = new Map<string, string>();
+    if (!effectiveMenu) {
+      return map;
+    }
+    for (const section of effectiveMenu.sections) {
+      for (const item of section.items) {
+        if (!map.has(item.refId)) {
+          map.set(item.refId, section.name);
+        }
+      }
+    }
+    return map;
+  }, [effectiveMenu]);
+
+  const normalizedSearchQuery = searchQuery.trim().toLowerCase();
+  const searchResults = useMemo(() => {
+    if (!normalizedSearchQuery) {
+      return [];
+    }
+    return effectiveRecipes.filter((recipe) => recipe.name.toLowerCase().includes(normalizedSearchQuery));
+  }, [effectiveRecipes, normalizedSearchQuery]);
 
   const getRecipesBySection = (section: MenuSection): Recipe[] => {
     return section.items
@@ -624,11 +649,16 @@ export default function MenuDetail() {
           <Sheet open={Boolean(mobileSheet)} onOpenChange={(open) => !open && setMobileSheet(null)}>
             <SheetContent
               side="bottom"
-              className="h-auto max-h-[76vh] overflow-y-auto rounded-t-3xl px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+              className={
+                mobileSheet === "search"
+                  ? "h-[90vh] max-h-[90vh] overflow-y-auto rounded-t-3xl px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+                  : "h-auto max-h-[88vh] overflow-y-auto rounded-t-3xl px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+              }
             >
               <SheetHeader className="px-1 pb-2">
                 <SheetTitle className="text-2xl font-bold text-[#1b0736]">
                   {mobileSheet === "categories" && "Categorie"}
+                  {mobileSheet === "search" && "Cerca piatto"}
                   {mobileSheet === "allergens" && "Allergeni"}
                   {mobileSheet === "contacts" && "Contatti"}
                   {mobileSheet === "share" && "Condividi Menù"}
@@ -680,6 +710,48 @@ export default function MenuDetail() {
                       Nessun allergene disponibile in questo menù.
                     </p>
                   )}
+                </div>
+              )}
+
+              {mobileSheet === "search" && (
+                <div className="space-y-3 pb-2">
+                  <Input
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="Scrivi il nome del piatto"
+                    className="h-12 rounded-xl border-[#e3d9f1] bg-white text-base"
+                  />
+
+                  <div className="space-y-2">
+                    {!normalizedSearchQuery ? (
+                      <p className="rounded-xl bg-[#f7f3ff] p-4 text-sm text-[#5f537d]">
+                        Inizia a digitare per cercare un piatto.
+                      </p>
+                    ) : searchResults.length > 0 ? (
+                      searchResults.map((recipe) => (
+                        <button
+                          key={recipe.recipeId}
+                          onClick={() => {
+                            setMobileSheet(null);
+                            handleRecipeClick(recipe.recipeId);
+                          }}
+                          className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left"
+                        >
+                          <span>
+                            <span className="block font-medium text-[#1b0736]">{recipe.name}</span>
+                            <span className="mt-0.5 block text-xs font-medium uppercase tracking-wide text-[#6a5c86]">
+                              {recipeCategoryMap.get(recipe.recipeId) || "Categoria non disponibile"}
+                            </span>
+                          </span>
+                          <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                        </button>
+                      ))
+                    ) : (
+                      <p className="rounded-xl bg-[#f7f3ff] p-4 text-sm text-[#5f537d]">
+                        Nessun piatto trovato con questo nome.
+                      </p>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -808,18 +880,20 @@ export default function MenuDetail() {
                 <span className="text-[11px] font-semibold uppercase tracking-wide">Categoria</span>
               </button>
               <button
+                onClick={() => {
+                  setMobileSheet("search");
+                }}
+                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
+              >
+                <Search className="h-6 w-6" />
+                <span className="text-[11px] font-semibold uppercase tracking-wide">Cerca</span>
+              </button>
+              <button
                 onClick={() => setMobileSheet("allergens")}
                 className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
               >
                 <ShieldAlert className="h-6 w-6" />
                 <span className="text-[11px] font-semibold uppercase tracking-wide">Allergeni</span>
-              </button>
-              <button
-                onClick={() => setMobileSheet("contacts")}
-                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
-              >
-                <Info className="h-6 w-6" />
-                <span className="text-[11px] font-semibold uppercase tracking-wide">Contatti</span>
               </button>
               <button
                 onClick={() => setMobileSheet("share")}
