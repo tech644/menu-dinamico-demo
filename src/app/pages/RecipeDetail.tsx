@@ -6,6 +6,7 @@ import { Header } from "../components/Header";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { LoadingSpinner } from "../components/LoadingSpinner";
 import { AlertCircle, ChefHat } from "lucide-react";
+import { getRecipeImageUrl } from "../utils/recipeImage";
 
 export default function RecipeDetail() {
   const { recipeId } = useParams<{ recipeId: string }>();
@@ -50,7 +51,7 @@ export default function RecipeDetail() {
       {/* Hero Image */}
       <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#efe6ff] to-[#e9fdf8] md:h-96">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop"
+          src={getRecipeImageUrl(recipe, "hero")}
           alt={recipe.name}
           className="w-full h-full object-cover"
         />

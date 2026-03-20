@@ -6,7 +6,7 @@ export default function Root() {
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
-      <main className="ord-page-bg">
+      <main className="ord-page-bg flex-1">
         <Outlet />
       </main>
       <AppFooter />

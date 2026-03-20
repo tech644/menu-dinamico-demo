@@ -1,5 +1,6 @@
 import { Recipe } from "../services/recipeService";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { getRecipeImageUrl } from "../utils/recipeImage";
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -14,7 +15,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
     >
       <div className="aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#f1e8ff] to-[#e9fdf8]">
         <ImageWithFallback
-          src={`https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop`}
+          src={getRecipeImageUrl(recipe, "card")}
           alt={recipe.name}
           className="w-full h-full object-cover"
         />

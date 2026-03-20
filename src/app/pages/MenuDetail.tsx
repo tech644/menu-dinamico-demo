@@ -15,7 +15,7 @@ import {
   SheetTitle,
 } from "../components/ui/sheet";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
-import { AlertCircle, ChefHat } from "lucide-react";
+import { AlertCircle, ChefHat, Loader2 } from "lucide-react";
 import { resolveVenueCode } from "../services/venueResolverService";
 import NotFound from "./NotFound";
 import {
@@ -32,6 +32,8 @@ import {
   SelectItem,
   SelectTrigger,
 } from "../components/ui/select";
+import { useIsMobile } from "../components/ui/use-mobile";
+import { getRecipeImageUrl } from "../utils/recipeImage";
 
 const LANGUAGE_OPTIONS: Array<{ value: SupportedLanguage; label: string; flag: string }> = [
   { value: "it", label: "IT", flag: "🇮🇹" },
@@ -112,6 +114,7 @@ export default function MenuDetail() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
   const isScrollingProgrammatically = useRef(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     async function loadMenuData() {
@@ -303,7 +306,15 @@ export default function MenuDetail() {
             onValueChange={(value) => setLanguage(value as SupportedLanguage)}
           >
             <SelectTrigger className="h-auto w-auto border-0 bg-transparent px-0 py-0 text-3xl leading-none shadow-none ring-0 [&>svg]:hidden">
-              <span>{LANGUAGE_OPTIONS.find((option) => option.value === language)?.flag}</span>
+              <span className="inline-flex items-center gap-1.5">
+                <span>{LANGUAGE_OPTIONS.find((option) => option.value === language)?.flag}</span>
+                {translating && (
+                  <Loader2
+                    className="h-4 w-4 animate-spin text-[#6a5c86]"
+                    aria-label={labels.translating}
+                  />
+                )}
+              </span>
             </SelectTrigger>
             <SelectContent className="rounded-3xl border-[#e3d9f1] bg-white p-0">
               {LANGUAGE_OPTIONS.map((option) => (
@@ -379,11 +390,15 @@ export default function MenuDetail() {
 
       <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
         <SheetContent
-          side="bottom"
-          className="h-auto max-h-[76vh] overflow-y-auto rounded-t-3xl md:inset-x-auto md:left-1/2 md:w-[calc(100%-2rem)] md:max-w-5xl md:-translate-x-1/2 md:rounded-3xl md:max-h-[82vh]"
+          side={isMobile ? "bottom" : "right"}
+          className={
+            isMobile
+              ? "h-auto max-h-[76vh] overflow-y-auto rounded-t-3xl"
+              : "h-full w-full overflow-y-auto border-l md:w-[46rem] md:max-w-[46rem] md:rounded-l-3xl"
+          }
         >
           {selectedRecipe ? (
-            <div className="mx-auto w-full max-w-3xl pb-8">
+            <div className={isMobile ? "mx-auto w-full max-w-2xl pb-8" : "mx-auto w-full max-w-3xl px-5 pb-8 md:px-6"}>
               <SheetHeader className="sr-only">
                 <SheetTitle>{selectedRecipe.name}</SheetTitle>
               </SheetHeader>
@@ -391,7 +406,7 @@ export default function MenuDetail() {
               {/* Hero Image */}
               <div className="relative mb-6 h-48 overflow-hidden rounded-xl bg-gradient-to-br from-[#efe6ff] to-[#e9fdf8] md:h-64">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop"
+                  src={getRecipeImageUrl(selectedRecipe, "hero")}
                   alt={selectedRecipe.name}
                   className="w-full h-full object-cover"
                 />
