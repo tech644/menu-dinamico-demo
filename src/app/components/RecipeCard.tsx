@@ -18,7 +18,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
     <button
       type="button"
       onClick={onClick}
-      className="flex h-full w-full appearance-none flex-col overflow-hidden rounded-2xl border border-[#e8e0f4] bg-white p-0 text-left shadow-sm transition-shadow duration-300 hover:shadow-md"
+      className="flex h-full w-full min-w-0 appearance-none flex-col overflow-hidden rounded-2xl border border-[#e8e0f4] bg-white p-0 text-left shadow-sm transition-shadow duration-300 hover:shadow-md"
     >
       <div className="relative h-56 overflow-hidden bg-gradient-to-br from-[#f1e8ff] to-[#e9fdf8]">
         <ImageWithFallback
@@ -29,12 +29,12 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-4">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="flex-1 text-lg font-bold text-[#1b0736]">
+      <div className="flex w-full min-w-0 flex-1 flex-col p-4">
+        <div className="mb-2 flex w-full min-w-0 items-start gap-2">
+          <h3 className="min-w-0 flex-1 text-lg font-bold text-[#1b0736]">
             {recipe.name}
           </h3>
-          <span className="ml-2 text-lg font-black text-[#2a0a4a]">
+          <span className="ml-auto shrink-0 text-lg font-black text-[#2a0a4a]">
             € {recipe.salePrice.toFixed(2).replace('.', ',')}
           </span>
         </div>
@@ -45,7 +45,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
           </p>
         )}
 
-        <div className="mt-auto border-t border-[#ece5f8] pt-3">
+        <div className="mt-auto w-full border-t border-[#ece5f8] pt-3">
           <div className="flex min-h-6 items-start gap-2">
             <span className="whitespace-nowrap text-xs font-semibold text-[#ff1dbb]">Allergeni:</span>
             <span className="text-xs capitalize leading-relaxed text-[#4a3f63]">
