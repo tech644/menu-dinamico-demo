@@ -1,0 +1,36 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Custom scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.ord-page-bg {
+  background:
+    radial-gradient(circle at 20% -10%, rgba(42, 235, 201, 0.18), transparent 35%),
+    radial-gradient(circle at 90% 20%, rgba(255, 29, 187, 0.17), transparent 40%),
+    linear-gradient(135deg, #f7f3ff 0%, #f5f2fb 50%, #f2edf8 100%);
+}
+
+.ord-cta {
+  background: linear-gradient(135deg, var(--ordinoo-purple-800), var(--ordinoo-purple-700));
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.ord-cta:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(27, 7, 54, 0.28);
+}
+
+.ord-accent-line {
+  background: linear-gradient(90deg, var(--ordinoo-cyan), var(--ordinoo-pink));
+}

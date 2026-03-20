@@ -1,0 +1,6820 @@
+{
+  "source": "fnb_v2_filtered_recipes_export",
+  "timestamp": "2026-03-20T10:30:23.455",
+  "searchQuery": "",
+  "selectedMenuIds": [
+    "menu_mmxorv5tbiq"
+  ],
+  "selectedCategoryIds": [],
+  "count": 51,
+  "recipes": [
+    {
+      "recipeId": "recipe_fe384411",
+      "localId": "default-10754721214",
+      "name": "Il parfait al caramello salato",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_44654a4d",
+          "name": "panna fresca",
+          "products": [
+            {
+              "refProductId": "01619600487_1163",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8b97bbc8",
+          "name": "zucchero semolato",
+          "products": [
+            {
+              "refProductId": "00830210480_ZUC4ZUCCBU_e7a52d",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.48,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5db35469",
+          "name": "tuorlo d'uovo",
+          "products": [
+            {
+              "refProductId": "00958370504_396",
+              "quantity": 0.018,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.86934,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c54471d3",
+          "name": "burro",
+          "products": [
+            {
+              "refProductId": "00958370504_4174",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.95,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6f21b8ad",
+          "name": "mandorle tostate tritate",
+          "products": [
+            {
+              "refProductId": "00830210480_SGM5MANDORLE_feb9c9",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12.88,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b37af0f1",
+          "name": "sale marino",
+          "products": [
+            {
+              "refProductId": "virtual_1501f60f",
+              "quantity": 0.5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 7,
+      "totalCost": 0.79,
+      "foodCostPercentage": 11.22,
+      "procedure": "",
+      "description": "(Panna, zucchero, uova, burro, mandorle)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:49.089Z"
+    },
+    {
+      "recipeId": "recipe_41d95624",
+      "localId": "default-10754721214",
+      "name": "San michele",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_b7bd1da1",
+          "name": "spaghetti",
+          "products": [
+            {
+              "refProductId": "06237810632_1358",
+              "quantity": 0.12,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_899e08ed",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d47126fe",
+          "name": "olive nere di Gaeta",
+          "products": [
+            {
+              "refProductId": "00761940550_E18_56a326",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.89,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_35f1bd2f",
+          "name": "alici",
+          "products": [
+            {
+              "refProductId": "09509931219_0021",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b578b71d",
+          "name": "origano",
+          "products": [
+            {
+              "refProductId": "05658730485_6136",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.625,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4376560b",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "virtual_9ef25074",
+              "quantity": 1,
+              "unit": "pz",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bb361956",
+          "name": "basilico",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c8346751",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_56c90d64",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 15,
+      "totalCost": 0.6,
+      "foodCostPercentage": 3.99,
+      "procedure": "",
+      "description": "Pomodorini, olive nere di Gaeta, alici, origano, aglio, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:45.667Z"
+    },
+    {
+      "recipeId": "recipe_04dfa49b",
+      "localId": "default-10754721214",
+      "name": "La ricotta e pere",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_18365105",
+          "name": "pere",
+          "products": [
+            {
+              "refProductId": "virtual_23e7c35a",
+              "quantity": 150,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2d9f168e",
+          "name": "ricotta",
+          "products": [
+            {
+              "refProductId": "01619600487_137_de87fd",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.1,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8778792c",
+          "name": "mandorle",
+          "products": [
+            {
+              "refProductId": "00830210480_SGM5MANDORLE_feb9c9",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12.88,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8a3ecd7c",
+          "name": "uova",
+          "products": [
+            {
+              "refProductId": "06237810632_0008802",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.306,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9325b632",
+          "name": "zucchero",
+          "products": [
+            {
+              "refProductId": "00958370504_170",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.49,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_955d4e20",
+          "name": "burro",
+          "products": [
+            {
+              "refProductId": "00958370504_4174",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.95,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5bb1d787",
+          "name": "panna",
+          "products": [
+            {
+              "refProductId": "01619600487_1163",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0b7c4cb5",
+          "name": "farina",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 7,
+      "totalCost": 1.25,
+      "foodCostPercentage": 17.9,
+      "procedure": "",
+      "description": "(pere, ricotta, mandorle, uova, zucchero, burro, panna, farina)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:45.275Z"
+    },
+    {
+      "recipeId": "recipe_7c00b622",
+      "localId": "default-10754721214",
+      "name": "Amalfitana (ripieno)",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_cae34a28",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_341c820d",
+          "name": "uovo",
+          "products": [
+            {
+              "refProductId": "06237810632_0008802",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.306,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6a1c2e54",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_5bc66c29",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bd4fce81",
+          "name": "sale",
+          "products": [
+            {
+              "refProductId": "virtual_4a687429",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_cff674ae",
+          "name": "ricotta di bufala",
+          "products": [
+            {
+              "refProductId": "01619600487_137_de87fd",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.1,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bbcd7a21",
+          "name": "prosciutto cotto al rosmarino",
+          "products": [
+            {
+              "refProductId": "virtual_110c02ae",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b72d4460",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_2d49fe2f",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b92875d7",
+          "name": "foglie di limone",
+          "products": [
+            {
+              "refProductId": "virtual_c6548a11",
+              "quantity": 2,
+              "unit": "pz",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_86c8c70a",
+          "name": "parmigiano reggiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1954c823",
+          "name": "pepe nero",
+          "products": [
+            {
+              "refProductId": "virtual_c9a5bb85",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 0.92,
+      "foodCostPercentage": 7.04,
+      "procedure": "",
+      "description": "Ricotta di bufala, prosciutto cotto al rosmarino, fior di latte, foglie di limone, olio evo e parmigiano",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:45.127Z"
+    },
+    {
+      "recipeId": "recipe_96dcd3c9",
+      "localId": "default-10754721214",
+      "name": "Piacevolezza",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_7e1931f9",
+          "name": "mozzarella di bufala",
+          "products": [
+            {
+              "refProductId": "05010730488_03105_80aefd",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3e614634",
+          "name": "gorgonzola piccante",
+          "products": [
+            {
+              "refProductId": "01619600487_138_a68a08",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10.2,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_39d1e94e",
+          "name": "parmigiano reggiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_04f25ed2",
+          "name": "pecorino romano",
+          "products": [
+            {
+              "refProductId": "virtual_6b404898",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d96b0de4",
+          "name": "riduzione di aceto balsamico",
+          "products": [
+            {
+              "refProductId": "00758720528_BA020_a24a3c",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 75,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_312a5881",
+          "name": "cipolle croccanti",
+          "products": [
+            {
+              "refProductId": "00761940550_ZZ1_34cb87",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.5692,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3241b56e",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_62cdef48",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 15,
+      "totalCost": 2.43,
+      "foodCostPercentage": 16.22,
+      "procedure": "",
+      "description": "4 formaggi, riduzione aceto balsamico, cipolle croccanti e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:43.676Z"
+    },
+    {
+      "recipeId": "recipe_b9142223",
+      "localId": "default-10754721214",
+      "name": "Oro di napoli",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_027d8939",
+          "name": "pomodori datterini gialli",
+          "products": [
+            {
+              "refProductId": "06237810632_0008893_a06cf7",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f7a0422e",
+          "name": "provola",
+          "products": [
+            {
+              "refProductId": "virtual_3ca56526",
+              "quantity": 50,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1586ebe2",
+          "name": "parmigiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8dd69a00",
+          "name": "basilico",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.003,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b03c6a5b",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_fe6667f4",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_551dba7e",
+          "name": "pepe nero",
+          "products": [
+            {
+              "refProductId": "virtual_dc00621d",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 12,
+      "totalCost": 1.92,
+      "foodCostPercentage": 15.97,
+      "procedure": "",
+      "description": "Pomodoro datterino giallo “piennolo”, provola, pepe, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:43.085Z"
+    },
+    {
+      "recipeId": "recipe_01beb7cc",
+      "localId": "default-10754721214",
+      "name": "Calzone ripieno (ripieno)",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_e545ed1d",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a59c6c80",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.12,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d2062935",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_b3670007",
+              "quantity": 3,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_955c5652",
+          "name": "olio extravergine di oliva (per impasto)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f9413c8d",
+          "name": "ricotta di bufala",
+          "products": [
+            {
+              "refProductId": "01619600487_137_de87fd",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.1,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_631d35a4",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_6ffea22c",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b490790d",
+          "name": "salame napoletano",
+          "products": [
+            {
+              "refProductId": "virtual_444e58f0",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0f970e6a",
+          "name": "pecorino",
+          "products": [
+            {
+              "refProductId": "01619600487_1012_f84f59",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 14.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ec2f8ba8",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.04,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e4abdfb1",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ac6fe025",
+          "name": "pepe nero macinato",
+          "products": [
+            {
+              "refProductId": "virtual_fbd36ec0",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5c85ad26",
+          "name": "olio extravergine di oliva (per condimento)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 14,
+      "totalCost": 0.92,
+      "foodCostPercentage": 6.58,
+      "procedure": "",
+      "description": "Ricotta di bufala, salame napoletano, pecorino, pepe, fior di latte, pomodorini, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:41.205Z"
+    },
+    {
+      "recipeId": "recipe_7ba1de20",
+      "localId": "default-10754721214",
+      "name": "La caprese",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_9d92a48c",
+          "name": "pomodoro",
+          "products": [
+            {
+              "refProductId": "05658730485_6469",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bd591ec2",
+          "name": "mozzarella di bufala",
+          "products": [
+            {
+              "refProductId": "05010730488_03105_80aefd",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8edbe919",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8a16ad4a",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_f099c706",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e453b4da",
+          "name": "sale",
+          "products": [
+            {
+              "refProductId": "virtual_d4ceb44d",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 7,
+      "totalCost": 1.6,
+      "foodCostPercentage": 22.86,
+      "procedure": "",
+      "description": "(mandorle, uova, zucchero, burro, cioccolato, cacao, amaretto)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:40.216Z"
+    },
+    {
+      "recipeId": "recipe_987bc251",
+      "localId": "default-10754721214",
+      "name": "Trevigiana",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_78fcc01f",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e1f2f45d",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.06,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ff12d76f",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_3786e1fd",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4e602eb7",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_a3b86552",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f8b31c6c",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_acb0f44b",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3a0a94d6",
+          "name": "gorgonzola",
+          "products": [
+            {
+              "refProductId": "01619600487_138_a68a08",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10.2,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_565b3d1d",
+          "name": "radicchio Treviso",
+          "products": [
+            {
+              "refProductId": "virtual_becc205e",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a07745d5",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 12,
+      "totalCost": 0.38,
+      "foodCostPercentage": 3.14,
+      "procedure": "",
+      "description": "Fior di latte, radicchio, gorgonzola, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:40.198Z"
+    },
+    {
+      "recipeId": "recipe_4d01ff4e",
+      "localId": "default-10754721214",
+      "name": "Cilentana",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_51e219ed",
+          "name": "patata vitelotta",
+          "products": [
+            {
+              "refProductId": "05658730485_497_f65f5b",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_fe613240",
+          "name": "provola",
+          "products": [
+            {
+              "refProductId": "virtual_0d73d997",
+              "quantity": 50,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_117a7c17",
+          "name": "salsiccia",
+          "products": [
+            {
+              "refProductId": "05043750487_MARIPO_175833",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e7dc34a5",
+          "name": "parmigiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_21ed9a3b",
+          "name": "basilico",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_579adec3",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_3ac8c352",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 1.22,
+      "foodCostPercentage": 9.38,
+      "procedure": "",
+      "description": "Patata Vitelotta, provola, salsiccia, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:40.109Z"
+    },
+    {
+      "recipeId": "recipe_0fc19679",
+      "localId": "default-10754721214",
+      "name": "Murtadela",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_b492cc23",
+          "name": "mortadella",
+          "products": [
+            {
+              "refProductId": "05043750487_104",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a5cb1b47",
+          "name": "mozzarella di bufala",
+          "products": [
+            {
+              "refProductId": "05010730488_03105_80aefd",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_58ed9d99",
+          "name": "salsa al pistacchio",
+          "products": [
+            {
+              "refProductId": "virtual_817c8a8d",
+              "quantity": 30,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9b86fb62",
+          "name": "rucola",
+          "products": [
+            {
+              "refProductId": "virtual_fcc7754d",
+              "quantity": 20,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ecb89055",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.04,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_679d9b94",
+          "name": "pistacchi tritati",
+          "products": [
+            {
+              "refProductId": "virtual_38c8a203",
+              "quantity": 10,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_37a5bbde",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_8d803b18",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 1.64,
+      "foodCostPercentage": 12.61,
+      "procedure": "",
+      "description": "Mozzarella di bufala, salsa al pistacchio, mortadella",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:37.299Z"
+    },
+    {
+      "recipeId": "recipe_02bd026d",
+      "localId": "default-10754721214",
+      "name": "Capricciosa",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_263e55d4",
+          "name": "impasto per pizza",
+          "products": [
+            {
+              "refProductId": "virtual_51d99c0c",
+              "quantity": 200,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f89c2240",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2592410a",
+          "name": "mozzarella fior di latte",
+          "products": [
+            {
+              "refProductId": "05010730488_03133_3d13f8",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_149d7b9f",
+          "name": "funghi champignon",
+          "products": [
+            {
+              "refProductId": "05658730485_5522_b73c3e",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_19f173a9",
+          "name": "carciofi sott'olio",
+          "products": [
+            {
+              "refProductId": "virtual_82a121b1",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c3a66e1a",
+          "name": "olive nere di Gaeta",
+          "products": [
+            {
+              "refProductId": "00761940550_E18_56a326",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.89,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e9580805",
+          "name": "prosciutto cotto",
+          "products": [
+            {
+              "refProductId": "06305180488_30361",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d277b8bd",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_842208fd",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_942b3e2c",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 15,
+      "totalCost": 1.1,
+      "foodCostPercentage": 7.31,
+      "procedure": "",
+      "description": "Pomodoro, fior di latte, funghi champignon, carciofi, olive nere di Gaeta, prosciutto cotto, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:36.719Z"
+    },
+    {
+      "recipeId": "recipe_565bd614",
+      "localId": "default-10754721214",
+      "name": "Bufalina",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_f120ea52",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_10a1417b",
+          "name": "mozzarella di bufala",
+          "products": [
+            {
+              "refProductId": "05010730488_03105_80aefd",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4550b5ba",
+          "name": "parmigiano reggiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4b22fb2d",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a69aaf13",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_85be178a",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 1.4,
+      "foodCostPercentage": 10.78,
+      "procedure": "",
+      "description": "Pomodorini, mozzarella di bufala, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:35.224Z"
+    },
+    {
+      "recipeId": "recipe_4d3c2951",
+      "localId": "default-10754721214",
+      "name": "Calabrese",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_6d77ad8b",
+          "name": "friarielli",
+          "products": [
+            {
+              "refProductId": "00761940550_D83_18d5e8",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.493,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_fac36326",
+          "name": "nduja",
+          "products": [
+            {
+              "refProductId": "virtual_c63a38be",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1d0eb4a8",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_cdda0018",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_70bc0076",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_b989d8af",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 0.97,
+      "foodCostPercentage": 7.49,
+      "procedure": "",
+      "description": "Friarielli, n’duja, fior di latte e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:34.601Z"
+    },
+    {
+      "recipeId": "recipe_0c5fd2ca",
+      "localId": "default-10754721214",
+      "name": "Pugliese",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_05b8661e",
+          "name": "farina",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.25,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_72a52276",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ac5a6cc2",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_03be2f97",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_14e0c797",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_a82e7521",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6cc079a7",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e52922c4",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_fb007642",
+              "quantity": 100,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4cc38e09",
+          "name": "cipolla",
+          "products": [
+            {
+              "refProductId": "09208461211_SCA272_cbb522",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.3,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c928bcef",
+          "name": "origano secco",
+          "products": [
+            {
+              "refProductId": "05658730485_6136",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.625,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0f833a57",
+          "name": "parmigiano reggiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6821b2ac",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.003,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 12,
+      "totalCost": 0.79,
+      "foodCostPercentage": 6.59,
+      "procedure": "",
+      "description": "Pomodoro, fior di latte, cipolla, origano, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:34.043Z"
+    },
+    {
+      "recipeId": "recipe_8d6721ae",
+      "localId": "default-10754721214",
+      "name": "Ricciulella (ripieno)",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_4e5e6f3b",
+          "name": "scarola riccia",
+          "products": [
+            {
+              "refProductId": "04155451216_3A",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.4,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a6640416",
+          "name": "provola",
+          "products": [
+            {
+              "refProductId": "virtual_f0020a6c",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ac2255e6",
+          "name": "olive nere",
+          "products": [
+            {
+              "refProductId": "00761940550_E18_56a326",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.89,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_23e981e1",
+          "name": "acciughe",
+          "products": [
+            {
+              "refProductId": "virtual_224cc9f5",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5dadf40d",
+          "name": "pomodori secchi",
+          "products": [
+            {
+              "refProductId": "virtual_b2e03c7d",
+              "quantity": 20,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8895ec99",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_859577fd",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 14,
+      "totalCost": 0.2,
+      "foodCostPercentage": 1.43,
+      "procedure": "",
+      "description": "Scarola riccia, provola, olive nere, acciughe, pomodori secchi e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:33.936Z"
+    },
+    {
+      "recipeId": "recipe_858adf59",
+      "localId": "default-10754721214",
+      "name": "Primavera",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_287b20a0",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.12,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e629b914",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.07,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b9148710",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_7baaae71",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_65a2bfb8",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.04,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3e50a29b",
+          "name": "provola affumicata",
+          "products": [
+            {
+              "refProductId": "virtual_489fc537",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8328fb22",
+          "name": "prosciutto crudo di San Daniele",
+          "products": [
+            {
+              "refProductId": "virtual_9f38a753",
+              "quantity": 20,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_97041ee7",
+          "name": "rucola",
+          "products": [
+            {
+              "refProductId": "virtual_46c6c408",
+              "quantity": 15,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_870d295d",
+          "name": "parmigiano reggiano a scaglie",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5730fefc",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.003,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e825d18a",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_8ce7fc9b",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 14,
+      "totalCost": 0.23,
+      "foodCostPercentage": 1.61,
+      "procedure": "",
+      "description": "Provola, parmigiano, basilico, olio evo, prosciutto crudo S. Daniele, rucola e parmigiano a scaglie “all’uscita”",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:32.808Z"
+    },
+    {
+      "recipeId": "recipe_78cf97c3",
+      "localId": "default-10754721214",
+      "name": "Ortolana",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_fcc6a349",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_11feb119",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e97d21b1",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_48abbb40",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ab474733",
+          "name": "olio extravergine d'oliva (per impasto)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0de3a110",
+          "name": "peperone",
+          "products": [
+            {
+              "refProductId": "06305180488_768_c7fa4f",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3377f6c4",
+          "name": "melanzana",
+          "products": [
+            {
+              "refProductId": "virtual_f83ec08f",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_cbcb080e",
+          "name": "zucchina",
+          "products": [
+            {
+              "refProductId": "04155451216_33L",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a65dc24f",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_0400bb6e",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_16ff7402",
+          "name": "parmigiano reggiano grattugiato",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4acc5036",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.003,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7a89bee1",
+          "name": "olio extravergine d'oliva (per condimento)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 0.49,
+      "foodCostPercentage": 3.79,
+      "procedure": "",
+      "description": "Verdure miste (peperoni, melanzane e zucchine), fior di latte, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:30.718Z"
+    },
+    {
+      "recipeId": "recipe_e4a2134e",
+      "localId": "default-10754721214",
+      "name": "Artista",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_0960451f",
+          "name": "provola",
+          "products": [
+            {
+              "refProductId": "virtual_2e1c3eee",
+              "quantity": 50,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_73fa696e",
+          "name": "zucchine",
+          "products": [
+            {
+              "refProductId": "04155451216_33L",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1d2973bc",
+          "name": "acciughe",
+          "products": [
+            {
+              "refProductId": "virtual_d9ecd12f",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_859137e1",
+          "name": "ricotta di bufala a gocce",
+          "products": [
+            {
+              "refProductId": "virtual_40c3e858",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3f11b18d",
+          "name": "basilico",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a6cc4c64",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_67a02beb",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 13,
+      "totalCost": 0.13,
+      "foodCostPercentage": 1,
+      "procedure": "",
+      "description": "Provola, zucchine, acciughe, ricotta di bufala a gocce, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:29.945Z"
+    },
+    {
+      "recipeId": "recipe_19ddc198",
+      "localId": "default-10754721214",
+      "name": "Sirena",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_6348484f",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c9dc27ca",
+          "name": "mozzarella di bufala",
+          "products": [
+            {
+              "refProductId": "05010730488_03105_80aefd",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_423e7dc5",
+          "name": "ricotta di bufala a gocce",
+          "products": [
+            {
+              "refProductId": "01619600487_137_de87fd",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.1,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_caffc74b",
+          "name": "basilico",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3d2adfee",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_b92bbfa5",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_25a84e90",
+          "name": "rucola",
+          "products": [
+            {
+              "refProductId": "virtual_bbaea4ac",
+              "quantity": 20,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_15ffe11f",
+          "name": "scaglie di parmigiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 14,
+      "totalCost": 1.15,
+      "foodCostPercentage": 8.22,
+      "procedure": "",
+      "description": "Pomodorini, mozzarella di bufala, ricotta di bufala a gocce, basilico, olio evo, rucola e scaglie di parmigiano",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:29.932Z"
+    },
+    {
+      "recipeId": "recipe_7c303927",
+      "localId": "default-10754721214",
+      "name": "Romana",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_aeb8d47b",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.18,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_64ff4d3d",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.11,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f2e7baf5",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_14b75a3d",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_479ccdab",
+          "name": "sale fino",
+          "products": [
+            {
+              "refProductId": "virtual_dca940d9",
+              "quantity": 4,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4cd91fa1",
+          "name": "olio extravergine d'oliva (per impasto)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.0054,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_50d15c22",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5a7a0a73",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_3dd03601",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_42af2ea4",
+          "name": "acciughe sott'olio",
+          "products": [
+            {
+              "refProductId": "virtual_3afd2bfa",
+              "quantity": 10,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a29234c7",
+          "name": "origano secco",
+          "products": [
+            {
+              "refProductId": "05658730485_6136",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.625,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c560c466",
+          "name": "parmigiano reggiano grattugiato",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_726e7204",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_15238e84",
+          "name": "olio extravergine d'oliva (drizzle)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 12,
+      "totalCost": 0.38,
+      "foodCostPercentage": 3.14,
+      "procedure": "",
+      "description": "Pomodoro, fior di latte, acciughe, origano, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:28.394Z"
+    },
+    {
+      "recipeId": "recipe_64183443",
+      "localId": "default-10754721214",
+      "name": "Scarpariello",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_59b2be96",
+          "name": "spaghetti",
+          "products": [
+            {
+              "refProductId": "06237810632_1358",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8b24a29e",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.12,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9eb5b7b0",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_dbad560c",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_27e315b3",
+          "name": "pecorino romano",
+          "products": [
+            {
+              "refProductId": "virtual_4450a197",
+              "quantity": 20,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_80ceaebe",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.003,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d76c9f48",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_f5533ed2",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d37bf9db",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 3,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 10,
+      "totalCost": 0.29,
+      "foodCostPercentage": 2.87,
+      "procedure": "",
+      "description": "Pomodoro, fior di latte, pecorino, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:26.599Z"
+    },
+    {
+      "recipeId": "recipe_870c5597",
+      "localId": "default-10754721214",
+      "name": "Diavola",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_febd6166",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_27c13d5a",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.12,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7f2b09fc",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_b9dab405",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9f7a9459",
+          "name": "sale",
+          "products": [
+            {
+              "refProductId": "virtual_15a096ec",
+              "quantity": 4,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_72415ce4",
+          "name": "olio extravergine d'oliva (per impasto)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.0054,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_98b8bedd",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_fbd95753",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_fc50cdfe",
+              "quantity": 100,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b69be14a",
+          "name": "salame piccante",
+          "products": [
+            {
+              "refProductId": "06305180488_7067",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 14.61,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6d75a29f",
+          "name": "parmigiano reggiano grattugiato",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_04bbf7eb",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b91c8400",
+          "name": "olio extravergine d'oliva (per condimento)",
+          "products": [
+            {
+              "refProductId": "00761940550_OEOR6_8b18e3",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.216,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 12,
+      "totalCost": 0.91,
+      "foodCostPercentage": 7.61,
+      "procedure": "",
+      "description": "Pomodoro, fior di latte, salame piccante, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:26.481Z"
+    },
+    {
+      "recipeId": "recipe_e0daa9aa",
+      "localId": "default-10754721214",
+      "name": "Il coniglio all'ischitana (intero, su prenotazione)",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_72a6e5da",
+          "name": "coniglio intero",
+          "products": [
+            {
+              "refProductId": "06281020633_CONIGLIOINTERO_7f1daf",
+              "quantity": 1.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.26,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2a20b182",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_186fab61",
+              "quantity": 30,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d74b8db2",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 10,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_49cd66c1",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8f72343f",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2824d172",
+          "name": "timo fresco",
+          "products": [
+            {
+              "refProductId": "05658730485_7031_fc3774",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.33,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 60,
+      "totalCost": 9.35,
+      "foodCostPercentage": 15.58,
+      "procedure": "",
+      "description": "(Coniglio, olio evo, aglio, pomodorini, basilico, timo)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:23.631Z"
+    },
+    {
+      "recipeId": "recipe_df0a1f71",
+      "localId": "default-10754721214",
+      "name": "Il coniglio all'ischitana (a porzione)",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_ed32cc97",
+          "name": "coniglio (cosciotto o petto)",
+          "products": [
+            {
+              "refProductId": "05043750487_77",
+              "quantity": 0.22,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ce4b899b",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_12816eab",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f337bd7c",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d68fb984",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_fbffd210",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_df89be61",
+          "name": "timo fresco",
+          "products": [
+            {
+              "refProductId": "05658730485_7031_fc3774",
+              "quantity": 0.0005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.33,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 22,
+      "totalCost": 2.51,
+      "foodCostPercentage": 11.39,
+      "procedure": "",
+      "description": "(Coniglio, olio evo, aglio, pomodorini, basilico, timo)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:22.475Z"
+    },
+    {
+      "recipeId": "recipe_24c7743b",
+      "localId": "default-10754721214",
+      "name": "Il filetto di scottona",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_3f4dbdec",
+          "name": "filetto di scottona",
+          "products": [
+            {
+              "refProductId": "virtual_0b129454",
+              "quantity": 200,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0167fd7f",
+          "name": "nocciole sgusciate",
+          "products": [
+            {
+              "refProductId": "00830210480_SGM5NOCCIOLE_e87fb3",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.98,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_513bc553",
+          "name": "vino rosso",
+          "products": [
+            {
+              "refProductId": "00011122233_MMOUERPV",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_094e2844",
+          "name": "patate novelle",
+          "products": [
+            {
+              "refProductId": "05658730485_497_f65f5b",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.8,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 28,
+      "totalCost": 1.61,
+      "foodCostPercentage": 5.75,
+      "procedure": "",
+      "description": "Gratinato alle nocciole con riduzione al vino rosso e patate",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:21.228Z"
+    },
+    {
+      "recipeId": "recipe_96e8ba8c",
+      "localId": "default-10754721214",
+      "name": "Margherita",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_cbf28325",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4d899350",
+          "name": "acqua",
+          "products": [
+            {
+              "refProductId": "03560190484_A70113_5586d4",
+              "quantity": 0.09,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.935,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_661fd898",
+          "name": "lievito di birra fresco",
+          "products": [
+            {
+              "refProductId": "virtual_1d19093b",
+              "quantity": 3,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_188b613f",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_5cffff3f",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_468c9ec8",
+          "name": "pomodori pelati San Marzano",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6bc76fee",
+          "name": "mozzarella fior di latte",
+          "products": [
+            {
+              "refProductId": "05010730488_03133_3d13f8",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e95fcd44",
+          "name": "parmigiano reggiano grattugiato",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1c825eaf",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 10,
+      "totalCost": 0.84,
+      "foodCostPercentage": 8.38,
+      "procedure": "",
+      "description": "Pomodoro, fior di latte, parmigiano, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:19.344Z"
+    },
+    {
+      "recipeId": "recipe_5eecb7c3",
+      "localId": "default-10754721214",
+      "name": "Marinara",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_6e9be51e",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_26b075b5",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_88672629",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_3bd7ac1f",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e055fa26",
+          "name": "origano secco",
+          "products": [
+            {
+              "refProductId": "05658730485_6136",
+              "quantity": 0.0005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.625,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6639e3ff",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 9,
+      "totalCost": 0.13,
+      "foodCostPercentage": 1.49,
+      "procedure": "",
+      "description": "Pomodoro, origano, aglio, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:19.336Z"
+    },
+    {
+      "recipeId": "recipe_bde98f9c",
+      "localId": "default-10754721214",
+      "name": "4 formaggi",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_145d9575",
+          "name": "impasto per pizza",
+          "products": [
+            {
+              "refProductId": "virtual_cc8106e9",
+              "quantity": 200,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_05a89950",
+          "name": "fior di latte",
+          "products": [
+            {
+              "refProductId": "virtual_af0a4d97",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e3bba7e9",
+          "name": "gorgonzola",
+          "products": [
+            {
+              "refProductId": "01619600487_138_a68a08",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10.2,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b3fba433",
+          "name": "fontina",
+          "products": [
+            {
+              "refProductId": "virtual_b3298d7f",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3902d2e0",
+          "name": "provola",
+          "products": [
+            {
+              "refProductId": "virtual_ca902a25",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f9db3536",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9d61300d",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_63d1fa22",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 12,
+      "totalCost": 0.31,
+      "foodCostPercentage": 2.59,
+      "procedure": "",
+      "description": "Fior di latte, gorgonzola, fontina, provola, basilico e olio evo",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:18.369Z"
+    },
+    {
+      "recipeId": "recipe_2318210f",
+      "localId": "default-10754721214",
+      "name": "La pasta patate e provola",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_97856986",
+          "name": "pasta mista",
+          "products": [
+            {
+              "refProductId": "00958370504_30296_ca84ec",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 6.98,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7c2c55ba",
+          "name": "patate",
+          "products": [
+            {
+              "refProductId": "05658730485_497_f65f5b",
+              "quantity": 0.12,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_65fbe141",
+          "name": "scalogno",
+          "products": [
+            {
+              "refProductId": "05658730485_7002_982159",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.26,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8b468acb",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_951d4914",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1b9f14fc",
+          "name": "provola Agerolese",
+          "products": [
+            {
+              "refProductId": "virtual_1ee86499",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b176606d",
+          "name": "pecorino",
+          "products": [
+            {
+              "refProductId": "01619600487_1012_f84f59",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 14.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_dd5f98fe",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 20,
+      "totalCost": 1.1,
+      "foodCostPercentage": 5.49,
+      "procedure": "",
+      "description": "Mantecata con provola Agerolese, cialda di Pecorino e olio al basilico (Pasta mista, patate, scalogno, olio evo, latticini, basilico)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:13.563Z"
+    },
+    {
+      "recipeId": "recipe_09093be2",
+      "localId": "default-10754721214",
+      "name": "Le linguine ruvide ai ricci di mare",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_e93f7399",
+          "name": "linguine ruvide",
+          "products": [
+            {
+              "refProductId": "virtual_ab6d71fa",
+              "quantity": 90,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7075ad8a",
+          "name": "pomodorini gialli",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e984d3f5",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_77327037",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_a95be809",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2e8e8364",
+          "name": "polpa di riccio di mare",
+          "products": [
+            {
+              "refProductId": "virtual_b9f5fd72",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_606f8292",
+          "name": "finocchietto selvatico",
+          "products": [
+            {
+              "refProductId": "virtual_8ba06027",
+              "quantity": 2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b046f6d8",
+          "name": "lime",
+          "products": [
+            {
+              "refProductId": "virtual_e16a6ba3",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f6fdaf79",
+          "name": "pane tostato",
+          "products": [
+            {
+              "refProductId": "00830210480_NTF5PANE00_cb36a8",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 22.99,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 26,
+      "totalCost": 0.47,
+      "foodCostPercentage": 1.8,
+      "procedure": "",
+      "description": "con acqua di pomodorino giallo e crumble al finocchietto selvatico (Linguine, pomodoro giallo, aglio, olio evo, polpa di riccio, finocchietto, lime, pane tostato)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:13.176Z"
+    },
+    {
+      "recipeId": "recipe_ad318b18",
+      "localId": "default-10754721214",
+      "name": "I paccheri di gragnano all’astice",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_de214179",
+          "name": "paccheri di Gragnano",
+          "products": [
+            {
+              "refProductId": "virtual_dd98ddbf",
+              "quantity": 100,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6a0efb3e",
+          "name": "astice (carne)",
+          "products": [
+            {
+              "refProductId": "virtual_5512a5a9",
+              "quantity": 150,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3df8509d",
+          "name": "pomodori datterini",
+          "products": [
+            {
+              "refProductId": "virtual_292f6e57",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3aaeaf9d",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e75704bd",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_83a832ed",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_38bb7488",
+          "name": "prezzemolo fresco",
+          "products": [
+            {
+              "refProductId": "06513970480_TORROSAE24_a07e20",
+              "quantity": 0.006,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.17,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 32,
+      "totalCost": 0.04,
+      "foodCostPercentage": 0.13,
+      "procedure": "",
+      "description": "Con la sua bisque e datterini (Paccheri, aglio, olio evo, crostacei, pomodori e prezzemolo)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:13.132Z"
+    },
+    {
+      "recipeId": "recipe_113b7e62",
+      "localId": "default-10754721214",
+      "name": "La spigola del mediterraneo",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_a756e853",
+          "name": "spigola",
+          "products": [
+            {
+              "refProductId": "08589371213_0174",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 15,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bbdeb225",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_60ab8f70",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_3c7da0cb",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0d0ae690",
+          "name": "peperoni",
+          "products": [
+            {
+              "refProductId": "06305180488_5798_9a805c",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.3,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bcb7de59",
+          "name": "zucchine",
+          "products": [
+            {
+              "refProductId": "04155451216_33L",
+              "quantity": 0.04,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b8968092",
+          "name": "melanzane",
+          "products": [
+            {
+              "refProductId": "virtual_9ff52163",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1fd86194",
+          "name": "vino bianco",
+          "products": [
+            {
+              "refProductId": "virtual_83e4cdb4",
+              "quantity": 30,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 30,
+      "totalCost": 3.18,
+      "foodCostPercentage": 10.58,
+      "procedure": "",
+      "description": "a filetta arrostita con salsa al peperone e verdurine (Pesce, aglio, olio evo, peperoni, zucchine, melanzane, vino)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:11.126Z"
+    },
+    {
+      "recipeId": "recipe_ad3feff5",
+      "localId": "default-10754721214",
+      "name": "Gli spaghetti alle vongole",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_d5335277",
+          "name": "spaghetti",
+          "products": [
+            {
+              "refProductId": "06237810632_1358",
+              "quantity": 0.1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_31ecfd9f",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e631e5cd",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_6ad4f619",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_10366478",
+          "name": "vongole",
+          "products": [
+            {
+              "refProductId": "08589371213_1234",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 15,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_39ab1c08",
+          "name": "taralli",
+          "products": [
+            {
+              "refProductId": "06237810632_0007977_bab2d2",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 4.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4a1bcd2d",
+          "name": "lime",
+          "products": [
+            {
+              "refProductId": "virtual_37b6a305",
+              "quantity": 0.5,
+              "unit": "pz",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8e4ee2bf",
+          "name": "prezzemolo",
+          "products": [
+            {
+              "refProductId": "virtual_6a19bf8d",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 25,
+      "totalCost": 3.26,
+      "foodCostPercentage": 13.02,
+      "procedure": "",
+      "description": "con lime e taralli (Spaghetti, aglio, olio evo, vongole, taralli, lime, prezzemolo)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:10.642Z"
+    },
+    {
+      "recipeId": "recipe_aa6431fb",
+      "localId": "default-10754721214",
+      "name": "I mezzanelli allo scarpariello",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_efda764d",
+          "name": "mezzanelli",
+          "products": [
+            {
+              "refProductId": "virtual_c183b5fa",
+              "quantity": 90,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b8766744",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5c1e1057",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4cb7eaa0",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_3cc69ee9",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a3c0c175",
+          "name": "cipolla",
+          "products": [
+            {
+              "refProductId": "00761940550_ZZ1_34cb87",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.5692,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_003abd3e",
+          "name": "sedano",
+          "products": [
+            {
+              "refProductId": "05658730485_6492",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5a8fa350",
+          "name": "carota",
+          "products": [
+            {
+              "refProductId": "05658730485_6529_a62abf",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f3f5042f",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b27b3246",
+          "name": "parmigiano 36 mesi",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.015,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9a31ca7c",
+          "name": "peperoncino secco",
+          "products": [
+            {
+              "refProductId": "virtual_a42453e0",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 20,
+      "totalCost": 0.69,
+      "foodCostPercentage": 3.43,
+      "procedure": "",
+      "description": "con sugo Napoletano, Parmigiano 36 mesi e peperoncino (Mezzanelli, pomodoro, aglio, olio evo, cipolle, sedano, carote, aromi)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:10.384Z"
+    },
+    {
+      "recipeId": "recipe_8f7e4e48",
+      "localId": "default-10754721214",
+      "name": "La delizia al limone",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5ttbf",
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_03e7e3f6",
+          "name": "biscotto savoiardo",
+          "products": [
+            {
+              "refProductId": "virtual_10284d44",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3293e54d",
+          "name": "burro",
+          "products": [
+            {
+              "refProductId": "00958370504_4174",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.95,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e4e306c9",
+          "name": "zucchero a velo",
+          "products": [
+            {
+              "refProductId": "00958370504_170",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.49,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b2330319",
+          "name": "panna fresca",
+          "products": [
+            {
+              "refProductId": "01619600487_1163",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b1ac5ce5",
+          "name": "mascarpone",
+          "products": [
+            {
+              "refProductId": "00761940550_A192_553bf3",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 8.31552,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_593efe43",
+          "name": "tuorlo d'uovo",
+          "products": [
+            {
+              "refProductId": "00958370504_396",
+              "quantity": 0.018,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.86934,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_cff0fa3e",
+          "name": "zucchero semolato",
+          "products": [
+            {
+              "refProductId": "00830210480_ZUC4ZUCCBU_e7a52d",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.48,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6d111877",
+          "name": "succo di limone fresco",
+          "products": [
+            {
+              "refProductId": "virtual_37f259b2",
+              "quantity": 20,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6629fb30",
+          "name": "scorza di limone grattugiata",
+          "products": [
+            {
+              "refProductId": "05658730485_8105",
+              "quantity": 0.002,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 7,
+      "totalCost": 1.24,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:10.089Z"
+    },
+    {
+      "recipeId": "recipe_758b8854",
+      "localId": "default-10754721214",
+      "name": "La parmigiana di melanzane",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tgtc",
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_44e6c36f",
+          "name": "melanzane",
+          "products": [
+            {
+              "refProductId": "virtual_8e00b021",
+              "quantity": 250,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_db49a1c0",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_e7667f86",
+              "quantity": 20,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bd79a2f4",
+          "name": "pomodori pelati",
+          "products": [
+            {
+              "refProductId": "05010730488_04005_dc36fe",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.2666666666666666,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8190d4b1",
+          "name": "mozzarella di bufala",
+          "products": [
+            {
+              "refProductId": "05010730488_03105_80aefd",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e5c2ebf1",
+          "name": "parmigiano reggiano grattugiato",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6dd8a822",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0a564949",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 3,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 14,
+      "totalCost": 1.69,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:06.690Z"
+    },
+    {
+      "recipeId": "recipe_20969d42",
+      "localId": "default-10754721214",
+      "name": "Il gran crudo*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_3aa96f85",
+          "name": "gamberi",
+          "products": [
+            {
+              "refProductId": "09509931219_0121",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7e07ce55",
+          "name": "scampi",
+          "products": [
+            {
+              "refProductId": "virtual_82e4d70c",
+              "quantity": 40,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_141a03c2",
+          "name": "ostriche",
+          "products": [
+            {
+              "refProductId": "09509931219_00202",
+              "quantity": 0.09,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 33,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8fe6a632",
+          "name": "tonno",
+          "products": [
+            {
+              "refProductId": "06347320481_FILTONNOPINNEGIALLOATMPRIMEThunnusalbacares_3c16b8",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 21.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_89a5a302",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_b628b7bf",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e3df86ab",
+          "name": "succo di limone",
+          "products": [
+            {
+              "refProductId": "09208461211_10634",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.184,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ddac0f86",
+          "name": "sale marino",
+          "products": [
+            {
+              "refProductId": "virtual_ed2c3215",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_93c2cc20",
+          "name": "pepe nero macinato",
+          "products": [
+            {
+              "refProductId": "virtual_ecf92757",
+              "quantity": 0.5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 60,
+      "totalCost": 5.24,
+      "foodCostPercentage": 8.73,
+      "procedure": "",
+      "description": "Gamberi, scampi, ostriche e tonno",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:06.305Z"
+    },
+    {
+      "recipeId": "recipe_39a3a576",
+      "localId": "default-10754721214",
+      "name": "I ravioli alla cernia",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5ttbf",
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_5a1ecbec",
+          "name": "farina 00",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_86b04835",
+          "name": "uova",
+          "products": [
+            {
+              "refProductId": "06237810632_0008802",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.306,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3b4aa2ca",
+          "name": "cernia fresca (filetto)",
+          "products": [
+            {
+              "refProductId": "05663300480_A760168_a76510",
+              "quantity": 0.076,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.04,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7f17b866",
+          "name": "ricotta fresca",
+          "products": [
+            {
+              "refProductId": "01619600487_137_de87fd",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.1,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_15dc8a9d",
+          "name": "scorza di limone",
+          "products": [
+            {
+              "refProductId": "05658730485_8105",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bfa248b1",
+          "name": "prezzemolo fresco",
+          "products": [
+            {
+              "refProductId": "06513970480_TORROSAE24_a07e20",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.17,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bda1a465",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_da96a7b3",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 1,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1c13ca6e",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_caae49a1",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b7d2001a",
+          "name": "succo di limone",
+          "products": [
+            {
+              "refProductId": "09208461211_10634",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.184,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_fdc40740",
+          "name": "pinoli",
+          "products": [
+            {
+              "refProductId": "virtual_cb5ee6d3",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 24,
+      "totalCost": 0.66,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "con limone, pinoli e salsa verde leggera",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:00.796Z"
+    },
+    {
+      "recipeId": "recipe_d399f940",
+      "localId": "default-10754721214",
+      "name": "Il pescato del giorno",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_2e82618a",
+          "name": "filetti di pesce fresco",
+          "products": [
+            {
+              "refProductId": "virtual_126d0a3e",
+              "quantity": 200,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b90341f8",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_7cf3d978",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c8953780",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f2cfb5e9",
+          "name": "prezzemolo fresco tritato",
+          "products": [
+            {
+              "refProductId": "virtual_02ddbb97",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_471d08e6",
+          "name": "limone",
+          "products": [
+            {
+              "refProductId": "05658730485_8105",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_792251f0",
+          "name": "vino bianco secco",
+          "products": [
+            {
+              "refProductId": "virtual_dec606d8",
+              "quantity": 20,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_270f796c",
+          "name": "pomodorini ciliegia",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 80,
+      "totalCost": 0.26,
+      "foodCostPercentage": 0.33,
+      "procedure": "",
+      "description": "in varie cotture",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:32:00.307Z"
+    },
+    {
+      "recipeId": "recipe_9265f568",
+      "localId": "default-10754721214",
+      "name": "La tartara di spigola*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_a071fc59",
+          "name": "spigola (filetto)",
+          "products": [
+            {
+              "refProductId": "08589371213_0174",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 15,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_95693e7c",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_a865e513",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d18d21e5",
+          "name": "zenzero fresco (perle)",
+          "products": [
+            {
+              "refProductId": "virtual_73915037",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_899c3e3e",
+          "name": "polvere di agrumi bruciati",
+          "products": [
+            {
+              "refProductId": "virtual_6281a4f3",
+              "quantity": 1,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 20,
+      "totalCost": 2.25,
+      "foodCostPercentage": 11.25,
+      "procedure": "",
+      "description": "con perle di zenzero e polvere di agrumi bruciati (Pesce, olio evo, zenzero. agrumi)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:59.222Z"
+    },
+    {
+      "recipeId": "recipe_8a48a54e",
+      "localId": "default-10754721214",
+      "name": "Le alici marinate*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_ac007eec",
+          "name": "alici fresche",
+          "products": [
+            {
+              "refProductId": "09509931219_0021",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_81e8e146",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ec466cff",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_e0259608",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_4ec5bb26",
+          "name": "aceto di vino bianco",
+          "products": [
+            {
+              "refProductId": "06237810632_0008893_c424a3",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_047a3656",
+          "name": "peperoncino rosso tritato",
+          "products": [
+            {
+              "refProductId": "05658730485_2260",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 25,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 14,
+      "totalCost": 0.58,
+      "foodCostPercentage": 4.14,
+      "procedure": "",
+      "description": "Pesce, aglio, olio evo e aceto",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:59.024Z"
+    },
+    {
+      "recipeId": "recipe_0639e8e1",
+      "localId": "default-10754721214",
+      "name": "I fusilloni di gragnano alla nerano",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tgtc",
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_8eaa340f",
+          "name": "fusilloni di Gragnano",
+          "products": [
+            {
+              "refProductId": "virtual_1f620c30",
+              "quantity": 120,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3e031286",
+          "name": "zucchine",
+          "products": [
+            {
+              "refProductId": "04155451216_33L",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_34f1f84a",
+          "name": "farina per frittura",
+          "products": [
+            {
+              "refProductId": "00958370504_14084",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.05,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2b5853aa",
+          "name": "olio di semi per friggere",
+          "products": [
+            {
+              "refProductId": "IT02827030962_OLIOGIRASOLESALVADORPET_a7c9aa",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.34,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f221ed90",
+          "name": "panna fresca",
+          "products": [
+            {
+              "refProductId": "01619600487_1163",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6b717f78",
+          "name": "burro",
+          "products": [
+            {
+              "refProductId": "00958370504_4174",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.95,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d68a8535",
+          "name": "Provolone del Monaco",
+          "products": [
+            {
+              "refProductId": "virtual_cf437784",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7af49875",
+          "name": "Parmigiano reggiano",
+          "products": [
+            {
+              "refProductId": "01619600487_787",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 17.7,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 22,
+      "totalCost": 1.21,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "con zucchine fritte in crema, Provolone del Monaco e Parmigiano",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:58.325Z"
+    },
+    {
+      "recipeId": "recipe_a2beaf1a",
+      "localId": "default-10754721214",
+      "name": "Il baccalà in tempura *",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_db26bf18",
+          "name": "baccalà",
+          "products": [
+            {
+              "refProductId": "virtual_4e88c93b",
+              "quantity": 150,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3d872b29",
+          "name": "farina di riso",
+          "products": [
+            {
+              "refProductId": "virtual_2341aa2c",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3a4bb993",
+          "name": "olio per friggere",
+          "products": [
+            {
+              "refProductId": "IT02827030962_OLIOGIRASOLESALVADORPET_a7c9aa",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.34,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e31b8ab2",
+          "name": "patate",
+          "products": [
+            {
+              "refProductId": "05658730485_497_f65f5b",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3878b657",
+          "name": "basilico fresco",
+          "products": [
+            {
+              "refProductId": "04155451216_pra",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_1ef3c417",
+          "name": "cipolle",
+          "products": [
+            {
+              "refProductId": "virtual_b8225ecf",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_50df53d3",
+          "name": "zucchero di canna",
+          "products": [
+            {
+              "refProductId": "00830210480_ZUC4BUSTA5_387b64",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.62,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 22,
+      "totalCost": 1,
+      "foodCostPercentage": 4.54,
+      "procedure": "",
+      "description": "Con purea di patate al basilico, cipolle caramellate (Pesce, farina di riso, olio, patate, cipolle, zucchero di canna)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:58.034Z"
+    },
+    {
+      "recipeId": "recipe_a9426b8f",
+      "localId": "default-10754721214",
+      "name": "Il polpo verace*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5ttbf",
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_8d5da563",
+          "name": "polpo",
+          "products": [
+            {
+              "refProductId": "06305180488_C25090765_ea736b",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_43910284",
+          "name": "patate novelle",
+          "products": [
+            {
+              "refProductId": "05658730485_497_f65f5b",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f6f75edc",
+          "name": "prezzemolo fresco",
+          "products": [
+            {
+              "refProductId": "virtual_94da5732",
+              "quantity": 10,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9bfc6022",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2be7befb",
+          "name": "succo di limone",
+          "products": [
+            {
+              "refProductId": "09208461211_10634",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.184,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_7dfdc054",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_be86955b",
+              "quantity": 15,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e370436b",
+          "name": "capperi sotto sale",
+          "products": [
+            {
+              "refProductId": "virtual_5dbe1f55",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6d4de62c",
+          "name": "acciughe sott'olio",
+          "products": [
+            {
+              "refProductId": "virtual_ba0ff8b3",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 22,
+      "totalCost": 2.86,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "tostato con patate croccanti, aromi e salsa verde leggera",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:57.349Z"
+    },
+    {
+      "recipeId": "recipe_8003ad55",
+      "localId": "default-10754721214",
+      "name": "Il babà ghiacciato e grigliato con chantilly al rum",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tgtc",
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_caef0919",
+          "name": "baba al rum",
+          "products": [
+            {
+              "refProductId": "virtual_2044b62c",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_f0b16d12",
+          "name": "rum",
+          "products": [
+            {
+              "refProductId": "virtual_d0fae296",
+              "quantity": 20,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_91d4cfce",
+          "name": "burro",
+          "products": [
+            {
+              "refProductId": "00958370504_4174",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 11.95,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b3ebad67",
+          "name": "panna fresca",
+          "products": [
+            {
+              "refProductId": "01619600487_1163",
+              "quantity": 0.06,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d94dbf74",
+          "name": "zucchero a velo",
+          "products": [
+            {
+              "refProductId": "00958370504_170",
+              "quantity": 0.01,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.49,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bf68d216",
+          "name": "tuorlo d'uovo",
+          "products": [
+            {
+              "refProductId": "00958370504_396",
+              "quantity": 0.018,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0.86934,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_91d04dd4",
+          "name": "rum (per chantilly)",
+          "products": [
+            {
+              "refProductId": "virtual_91f43c35",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5b00acb9",
+          "name": "estratto di vaniglia",
+          "products": [
+            {
+              "refProductId": "virtual_adb653ca",
+              "quantity": 1,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_2b22694d",
+          "name": "frutti di bosco misti",
+          "products": [
+            {
+              "refProductId": "virtual_d1ee1d6d",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_139801cd",
+          "name": "foglie di menta",
+          "products": [
+            {
+              "refProductId": "06305180488_3963_207998",
+              "quantity": 0.0006,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 163.33,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 7,
+      "totalCost": 0.6,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:56.500Z"
+    },
+    {
+      "recipeId": "recipe_0152e9c4",
+      "localId": "default-10754721214",
+      "name": "Il carpaccio di manzo",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq",
+        "menu_mmxorv5tgtc"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_ddcaf7cc",
+          "name": "lamelle di carne di manzo Fassona",
+          "products": [
+            {
+              "refProductId": "virtual_f5f17803",
+              "quantity": 100,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c3e77656",
+          "name": "stracciata di bufala",
+          "products": [
+            {
+              "refProductId": "virtual_b9e80339",
+              "quantity": 30,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_010cd95e",
+          "name": "pomodorini essiccati",
+          "products": [
+            {
+              "refProductId": "virtual_a1db5b25",
+              "quantity": 12,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_71c9d4b8",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_c867c569",
+              "quantity": 5,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_de714aec",
+          "name": "sale",
+          "products": [
+            {
+              "refProductId": "virtual_737f6299",
+              "quantity": 0.5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bd36a3ea",
+          "name": "pepe nero macinato",
+          "products": [
+            {
+              "refProductId": "virtual_2ff45aa3",
+              "quantity": 0.2,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 23,
+      "totalCost": 0,
+      "foodCostPercentage": 0,
+      "procedure": "",
+      "description": "(Lamelle di Fassona, stracciata di bufala e pomodorini essiccati)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:55.036Z"
+    },
+    {
+      "recipeId": "recipe_2b8a007f",
+      "localId": "default-10754721214",
+      "name": "Il polpo affogato alla luciana*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_4e9c022f",
+          "name": "polpo",
+          "products": [
+            {
+              "refProductId": "06305180488_C25090765_ea736b",
+              "quantity": 0.3,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 12.8,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d3121880",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e7116970",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_c485f2d9",
+              "quantity": 20,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_0a94be20",
+          "name": "pomodorini",
+          "products": [
+            {
+              "refProductId": "IT02827030962_POMOCILIEGRCSMCITI_947001",
+              "quantity": 0.08,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.99,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_bc8561ff",
+          "name": "olive nere",
+          "products": [
+            {
+              "refProductId": "00761940550_E18_56a326",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.89,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3367329d",
+          "name": "capperi",
+          "products": [
+            {
+              "refProductId": "virtual_c2d8eb06",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5db7e3cc",
+          "name": "prezzemolo",
+          "products": [
+            {
+              "refProductId": "virtual_aa027134",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_b41dad02",
+          "name": "crostini",
+          "products": [
+            {
+              "refProductId": "virtual_2e640e4d",
+              "quantity": 2,
+              "unit": "pz",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 25,
+      "totalCost": 4.2,
+      "foodCostPercentage": 16.79,
+      "procedure": "",
+      "description": "(Polpo, aglio, olio, pomodorini, olive, capperi, prezzemolo e crostini)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:54.878Z"
+    },
+    {
+      "recipeId": "recipe_fca994d5",
+      "localId": "default-10754721214",
+      "name": "Il gambero di mazara*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_3f2a52aa",
+          "name": "gamberi di Mazara",
+          "products": [
+            {
+              "refProductId": "09509931219_0121",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 10,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d864e04f",
+          "name": "ricotta di fuscella",
+          "products": [
+            {
+              "refProductId": "01619600487_137_de87fd",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 7.1,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_c2f6657e",
+          "name": "barbabietola rossa",
+          "products": [
+            {
+              "refProductId": "virtual_81d349b3",
+              "quantity": 80,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d8015649",
+          "name": "menta fresca",
+          "products": [
+            {
+              "refProductId": "05658730485_6038",
+              "quantity": 0.003,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 27,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_3e689e4d",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_2f34c9d0",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_a48c7063",
+          "name": "succo di limone",
+          "products": [
+            {
+              "refProductId": "09208461211_10634",
+              "quantity": 0.005,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.184,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e0c67c91",
+          "name": "scorza di limone",
+          "products": [
+            {
+              "refProductId": "05658730485_8105",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 3.5,
+              "priceOverridden": true
+            }
+          ]
+        }
+      ],
+      "salePrice": 23,
+      "totalCost": 1.96,
+      "foodCostPercentage": 8.5,
+      "procedure": "",
+      "description": "battuto con ricotta di fuscella aromatizzata, cremoso di barbabietole rosse e emulsione alla menta (Crostacei, latticini, olio evo, agrumi, barbabietole e menta)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:53.010Z"
+    },
+    {
+      "recipeId": "recipe_1697e17f",
+      "localId": "default-10754721214",
+      "name": "Il tonno*",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_46c6d7cb",
+          "name": "tonno fresco",
+          "products": [
+            {
+              "refProductId": "06347320481_FILTONNOPINNEGIALLOATMPRIMEThunnusalbacares_3c16b8",
+              "quantity": 0.15,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 21.9,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_d11306cc",
+          "name": "semi di sesamo",
+          "products": [
+            {
+              "refProductId": "virtual_90ed8b1f",
+              "quantity": 15,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5a277dca",
+          "name": "olio extravergine d'oliva",
+          "products": [
+            {
+              "refProductId": "virtual_4a3c163e",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_9d6c0dde",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 5,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e039ea3a",
+          "name": "arancia (succo e segmenti)",
+          "products": [
+            {
+              "refProductId": "00958370504_7656",
+              "quantity": 0.03,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 2.022,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ea7f26fb",
+          "name": "cipolla rossa",
+          "products": [
+            {
+              "refProductId": "00761940550_ZZ1_34cb87",
+              "quantity": 0.02,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 5.5692,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ae2495d0",
+          "name": "scarola",
+          "products": [
+            {
+              "refProductId": "04155451216_3A",
+              "quantity": 0.05,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 1.4,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e41b3f3f",
+          "name": "capperi sotto sale",
+          "products": [
+            {
+              "refProductId": "virtual_2f3695b9",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_8f998767",
+          "name": "olive nere denocciolate",
+          "products": [
+            {
+              "refProductId": "virtual_edf503a6",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 28,
+      "totalCost": 3.53,
+      "foodCostPercentage": 12.6,
+      "procedure": "",
+      "description": "in crosta di sesamo con arancia e scarola (Pesce, aglio, olio evo, sesamo, arancia, cipolla, scarola capperi e olive)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:49.066Z"
+    },
+    {
+      "recipeId": "recipe_2d25f5fd",
+      "localId": "default-10754721214",
+      "name": "Il sauté alle vongole",
+      "isBeverage": false,
+      "isCocktail": false,
+      "isBar": false,
+      "categories": [],
+      "menuIds": [
+        "menu_mmxorv5tbiq"
+      ],
+      "ingredients": [
+        {
+          "ingredientId": "ing_9a73fc58",
+          "name": "vongole",
+          "products": [
+            {
+              "refProductId": "08589371213_1234",
+              "quantity": 0.2,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 15,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_ecd34563",
+          "name": "aglio",
+          "products": [
+            {
+              "refProductId": "NO_SUPPLIER_HACCP_1751912197827",
+              "quantity": 3,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_5af0ab86",
+          "name": "olio extravergine di oliva",
+          "products": [
+            {
+              "refProductId": "virtual_d8ceedb8",
+              "quantity": 10,
+              "unit": "ml",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_854b9d4e",
+          "name": "prezzemolo",
+          "products": [
+            {
+              "refProductId": "virtual_81b130ae",
+              "quantity": 5,
+              "unit": "g",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_e38b7d9b",
+          "name": "peperoncino",
+          "products": [
+            {
+              "refProductId": "05658730485_2260",
+              "quantity": 0.001,
+              "unit": "",
+              "unitOverridden": false,
+              "scarto": 0,
+              "lastPrice": 25,
+              "priceOverridden": true
+            }
+          ]
+        },
+        {
+          "ingredientId": "ing_6f64f7c5",
+          "name": "crostini",
+          "products": [
+            {
+              "refProductId": "virtual_479a2554",
+              "quantity": 2,
+              "unit": "pz",
+              "unitOverridden": true,
+              "scarto": 0,
+              "lastPrice": 0,
+              "priceOverridden": false
+            }
+          ]
+        }
+      ],
+      "salePrice": 25,
+      "totalCost": 3.03,
+      "foodCostPercentage": 12.1,
+      "procedure": "",
+      "description": "(Vongole, aglio, olio evo, prezzemolo, peperoncino e crostini)",
+      "createdBy": "ai-import",
+      "createdAt": "2026-03-19T16:31:47.821Z"
+    }
+  ]
+}

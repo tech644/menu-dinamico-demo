@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt"), local("NeulisAlt"),
+    url("./fonts/neulisalt/NeulisAlt-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt Medium"), local("NeulisAlt-Medium"),
+    url("./fonts/neulisalt/NeulisAlt-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt SemiBold"), local("NeulisAlt-SemiBold"),
+    url("./fonts/neulisalt/NeulisAlt-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt Bold"), local("NeulisAlt-Bold"),
+    url("./fonts/neulisalt/NeulisAlt-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt Black"), local("NeulisAlt-Black"),
+    url("./fonts/neulisalt/NeulisAlt-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt Italic"), local("NeulisAlt-Italic"),
+    url("./fonts/neulisalt/NeulisAlt-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neulis Alt";
+  src: local("Neulis Alt Bold Italic"), local("NeulisAlt-BoldItalic"),
+    url("./fonts/neulisalt/NeulisAlt-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
