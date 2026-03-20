@@ -3,6 +3,7 @@ import { buildVenueCode } from "../services/venueResolverService";
 
 const demoVenueCode = buildVenueCode("default-business", menuData.menu.localId);
 
+// Entry page that documents the expected route format for local testing.
 export default function Landing() {
   return (
     <div className="ord-page-bg flex min-h-screen items-center justify-center px-4">

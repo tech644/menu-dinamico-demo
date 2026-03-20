@@ -7,7 +7,7 @@ import { Header } from "../components/Header";
 import { CategoryTabs } from "../components/CategoryTabs";
 import { RecipeCard } from "../components/RecipeCard";
 import { LoadingSpinner } from "../components/LoadingSpinner";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import {
   Sheet,
   SheetContent,
@@ -48,12 +48,13 @@ import { useIsMobile } from "../components/ui/use-mobile";
 import { getRecipeImageUrl } from "../utils/recipeImage";
 import { Input } from "../components/ui/input";
 
-const LANGUAGE_OPTIONS: Array<{ value: SupportedLanguage; label: string; flag: string }> = [
-  { value: "it", label: "Italiano", flag: "🇮🇹" },
-  { value: "en", label: "English", flag: "🇬🇧" },
-  { value: "es", label: "Español", flag: "🇪🇸" },
-  { value: "fr", label: "Français", flag: "🇫🇷" },
-  { value: "de", label: "Deutsch", flag: "🇩🇪" },
+// Menu detail page with section navigation, recipe sheet, translation, and venue contacts.
+const LANGUAGE_OPTIONS: Array<{ value: SupportedLanguage; label: string; marker: string }> = [
+  { value: "it", label: "Italiano", marker: "🇮🇹" },
+  { value: "en", label: "English", marker: "🇬🇧" },
+  { value: "es", label: "Español", marker: "🇪🇸" },
+  { value: "fr", label: "Français", marker: "🇫🇷" },
+  { value: "de", label: "Deutsch", marker: "🇩🇪" },
 ];
 
 const UI_LABELS: Record<
@@ -172,18 +173,18 @@ export default function MenuDetail() {
         
         setMenu(menuData);
         
-        // Extract all recipe IDs from menu sections
+        // Build a flat list of recipe ids referenced by menu items.
         const recipeIds = menuData.sections.flatMap(section =>
           section.items.map(item => item.refId)
         );
         
-        // Load all recipes
+        // Fetch recipes from the appropriate data source for the current route.
         const recipesData = isDemoRoute
           ? await getDemoRecipesByIds(recipeIds)
           : await getRecipesByIds(recipeIds);
         setRecipes(recipesData);
         
-        // Set first section as active
+        // Initialize the active section to keep tabs in sync from first render.
         if (menuData.sections.length > 0) {
           setActiveSection(menuData.sections[0].sectionId);
         }
@@ -231,26 +232,26 @@ export default function MenuDetail() {
   }, [language, menu, recipes]);
 
   useEffect(() => {
-    // Intersection Observer to update active section on scroll
+    // Keep section tabs aligned with the section currently visible on screen.
     const observer = new IntersectionObserver(
       (entries) => {
         if (isScrollingProgrammatically.current) return;
         
-        // Find the entry with the highest intersection ratio
+        // Consider only sections currently intersecting the viewport.
         const visibleEntries = entries.filter(entry => entry.isIntersecting);
         
         if (visibleEntries.length > 0) {
-          // Find the section that is closest to the top of the viewport
+          // Pick the section nearest to the content focus line below the sticky header.
           const mostVisible = visibleEntries.reduce((prev, current) => {
             const prevTop = prev.boundingClientRect.top;
             const currentTop = current.boundingClientRect.top;
             
-            // If both are above the trigger point (header + tabs area), choose the one closer to bottom
+            // If both are above the focus line, keep the lower one as active.
             if (prevTop < 100 && currentTop < 100) {
               return prevTop > currentTop ? prev : current;
             }
             
-            // Otherwise, choose the one closest to the top
+            // Otherwise use the nearest one to the focus line.
             return Math.abs(currentTop - 100) < Math.abs(prevTop - 100) ? current : prev;
           });
           
@@ -259,7 +260,7 @@ export default function MenuDetail() {
       },
       {
         threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-        rootMargin: "-100px 0px -40% 0px", // Less aggressive bottom margin
+        rootMargin: "-100px 0px -40% 0px",
       }
     );
 
@@ -397,7 +398,7 @@ export default function MenuDetail() {
           >
             <SelectTrigger className="h-auto w-auto border-0 bg-transparent px-0 py-0 text-3xl leading-none shadow-none ring-0 [&>svg]:hidden">
               <span className="inline-flex items-center gap-1.5">
-                <span>{LANGUAGE_OPTIONS.find((option) => option.value === language)?.flag}</span>
+                <span>{LANGUAGE_OPTIONS.find((option) => option.value === language)?.marker}</span>
                 {translating && (
                   <Loader2
                     className="h-4 w-4 animate-spin text-[#6a5c86]"
@@ -413,7 +414,7 @@ export default function MenuDetail() {
                   value={option.value}
                   className="h-12 border-b border-[#ece4f6] px-4 text-lg text-[#241833] last:border-b-0"
                 >
-                  <span>{option.flag}</span>
+                  <span>{option.marker}</span>
                   <span>{option.label}</span>
                 </SelectItem>
               ))}
@@ -555,7 +556,7 @@ export default function MenuDetail() {
                                 key={allergen.id}
                                 className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center transition-shadow hover:shadow-md"
                               >
-                                <div className="text-3xl mb-2">{getAllergenEmoji(allergen.name)}</div>
+                                <div className="text-3xl mb-2">{getAllergenMarker(allergen.name)}</div>
                                 <h3 className="text-sm font-semibold capitalize text-[#7d165f]">
                                   {allergen.name}
                                 </h3>
@@ -594,7 +595,7 @@ export default function MenuDetail() {
                               key={allergen.id}
                               className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center transition-shadow hover:shadow-md"
                             >
-                              <div className="text-3xl mb-2">{getAllergenEmoji(allergen.name)}</div>
+                              <div className="text-3xl mb-2">{getAllergenMarker(allergen.name)}</div>
                               <h3 className="text-sm font-semibold capitalize text-[#7d165f]">
                                 {allergen.name}
                               </h3>
@@ -701,7 +702,7 @@ export default function MenuDetail() {
                         key={allergen.id}
                         className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center"
                       >
-                        <div className="mb-2 text-3xl">{getAllergenEmoji(allergen.name)}</div>
+                        <div className="mb-2 text-3xl">{getAllergenMarker(allergen.name)}</div>
                         <h3 className="text-sm font-semibold capitalize text-[#7d165f]">{allergen.name}</h3>
                       </div>
                     ))
@@ -910,7 +911,7 @@ export default function MenuDetail() {
   );
 }
 
-function getAllergenEmoji(allergenName: string): string {
+function getAllergenMarker(allergenName: string): string {
   const normalized = allergenName.toLowerCase().trim();
   
   if (normalized.includes("glutine")) return "🌾";

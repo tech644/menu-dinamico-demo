@@ -1,5 +1,6 @@
 import { Loader2 } from "lucide-react";
 
+// Full-page loading state used while asynchronous page data is resolved.
 export function LoadingSpinner() {
   return (
     <div className="ord-page-bg flex min-h-screen items-center justify-center">

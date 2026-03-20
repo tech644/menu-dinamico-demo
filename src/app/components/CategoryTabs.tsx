@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 
+// Horizontal section selector with auto-centering on the active tab.
 interface CategoryTabsProps {
   categories: string[];
   activeCategory: string;
@@ -19,7 +20,7 @@ export function CategoryTabs({
   const activeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    // Scroll active button into view
+    // Keep the active tab centered in the horizontal viewport.
     if (activeButtonRef.current && scrollContainerRef.current) {
       const container = scrollContainerRef.current;
       const button = activeButtonRef.current;

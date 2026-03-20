@@ -3,11 +3,12 @@ import { useParams } from "react-router";
 import { getRecipeById, Recipe } from "../services/recipeService";
 import { getAllergensInfo } from "../services/allergenService";
 import { Header } from "../components/Header";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import { LoadingSpinner } from "../components/LoadingSpinner";
 import { AlertCircle, ChefHat } from "lucide-react";
 import { getRecipeImageUrl } from "../utils/recipeImage";
 
+// Recipe detail page with hero image, ingredients, allergen info, and pricing.
 export default function RecipeDetail() {
   const { recipeId } = useParams<{ recipeId: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);

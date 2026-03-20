@@ -1,18 +1,17 @@
-# 🍝 Restaurant Menu Web App - Nativa
+# Restaurant Menu Web App - Nativa
 
-Una moderna web app per la navigazione dei menu di un ristorante, con visualizzazione dettagliata delle ricette, ingredienti e allergeni.
+Web app per la navigazione dei menu di ristorante, con dettaglio ricette, ingredienti e allergeni.
 
-## ✨ Caratteristiche
+## Caratteristiche
 
-- 📱 **Mobile-First Design** - Ottimizzata per dispositivi mobili ma perfettamente accessibile da desktop
-- 🎯 **Navigazione Intelligente** - Se c'è un solo menu, vai direttamente al dettaglio
-- 📋 **Sezioni Dinamiche** - Menu organizzati per sezioni (Antipasti, Primi, Secondi, etc.)
-- 🏷️ **Dettaglio Ricette** - Informazioni complete su ingredienti, prezzo, allergeni
-- ⚠️ **Gestione Allergeni** - Sistema completo di rilevamento e visualizzazione allergeni
-- 🔥 **Pronto per Firebase** - Architettura pronta per integrazione Firebase Firestore
-- 🎨 **UI Moderna** - Design pulito e professionale con Tailwind CSS
+- Mobile-first: ottimizzata per dispositivi mobili e desktop
+- Navigazione menu: se esiste un solo menu, accesso diretto al dettaglio
+- Sezioni dinamiche: categorie menu guidate da dati
+- Dettaglio ricette: ingredienti, prezzo, allergeni e food cost
+- Integrazione Firebase: fallback locale e supporto Firestore
+- UI responsive: layout adattivo e componenti riusabili
 
-## 🏗️ Struttura del Progetto
+## Struttura del Progetto
 
 ```
 /src/app
@@ -32,7 +31,7 @@ Una moderna web app per la navigazione dei menu di un ristorante, con visualizza
 └── routes.ts          # Configurazione routing React Router
 ```
 
-## 🚀 Funzionalità
+## Funzionalità
 
 ### Navigazione Menu
 - Se ci sono più menu, mostra una lista di selezione
@@ -60,7 +59,7 @@ Il sistema rileva automaticamente allergeni comuni:
 - Senape
 - Sesamo
 
-## 🔧 Tecnologie
+## Tecnologie
 
 - **React 18.3** - Framework UI
 - **React Router 7** - Routing con Data Mode
@@ -69,13 +68,13 @@ Il sistema rileva automaticamente allergeni comuni:
 - **Lucide React** - Icons
 - **Vite** - Build tool
 
-## 📦 Dati Mock
+## Dati Mock
 
-I dati sono attualmente caricati da file JSON:
-- `/src/imports/pasted_text/menu-alla-carta.json` - Menu struttura
-- `/src/imports/fnb_ricette_filtrate_2026-03-20T10_30_23_477.json` - Ricette complete
+I dati fallback sono caricati dai file JSON:
+- `/src/app/data/mocks/menu.json` - struttura menu
+- `/src/app/data/mocks/ricette.json` - ricette complete
 
-## 🔥 Integrazione Firebase
+## Integrazione Firebase
 
 Configurazione minima per usare Firestore in locale e in produzione.
 
@@ -96,9 +95,9 @@ Imposta `VITE_USE_FIREBASE=true` e compila le variabili `VITE_FIREBASE_*`.
 
 4. Importa i dati iniziali nel database (collections `menus` e `recipes`)
 
-Tutti i servizi sono già strutturati per facilitare la migrazione a Firebase!
+I servizi applicativi sono già strutturati per facilitare la migrazione a Firebase.
 
-## 🌐 Traduzioni DeepL (Produzione)
+## Traduzioni DeepL (Produzione)
 
 In produzione la traduzione passa da una Netlify Function (`/api/deepl-translate`) per evitare errori CORS e non esporre la chiave nel browser.
 
@@ -108,7 +107,7 @@ Imposta la variabile server-side su Netlify:
 DEEPL_API_KEY=your_deepl_key
 ```
 
-## 🎨 Design
+## Design
 
 L'interfaccia è ispirata a un design moderno per ristoranti italiani:
 - Header con logo "Nativa" e bandiera italiana
@@ -117,7 +116,7 @@ L'interfaccia è ispirata a un design moderno per ristoranti italiani:
 - Transizioni fluide e animazioni
 - Responsive per tutti i dispositivi
 
-## 📱 Mobile First
+## Mobile First
 
 - Layout ottimizzato per schermi piccoli
 - Touch-friendly buttons e cards
@@ -125,7 +124,7 @@ L'interfaccia è ispirata a un design moderno per ristoranti italiani:
 - Hero images responsive
 - Grid adattivo per desktop
 
-## 🛠️ Personalizzazione
+## Personalizzazione
 
 ### Cambiare i Colori
 Modifica i colori principali in `/src/styles/theme.css`:
@@ -141,4 +140,4 @@ Le sezioni vengono caricate dinamicamente dal JSON del menu. Basta aggiungere un
 ### Modificare gli Allergeni
 Aggiorna `/src/app/services/allergenService.ts` per aggiungere o modificare allergeni.
 
-## 📄 License
+## License

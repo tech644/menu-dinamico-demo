@@ -1,3 +1,4 @@
+// Shared application footer.
 export function AppFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[radial-gradient(circle_at_20%_120%,rgba(42,235,201,0.22),transparent_38%),linear-gradient(135deg,#1B0736_0%,#2A0A4A_45%,#14042A_100%)] text-white">

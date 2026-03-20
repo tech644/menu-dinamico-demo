@@ -1,6 +1,7 @@
 import { X, AlertCircle } from 'lucide-react';
 import { Allergen } from '../types/recipe';
 
+// Modal used to display allergen details when requested by the user.
 interface AllergenModalProps {
   isOpen: boolean;
   onClose: () => void;

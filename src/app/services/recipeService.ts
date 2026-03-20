@@ -11,6 +11,7 @@ import {
 } from "firebase/firestore";
 import { getFirestoreDb, isFirebaseConfigured } from "./firebase";
 
+// Recipe data access with allergen enrichment and Firebase/local fallback support.
 export interface Ingredient {
   ingredientId: string;
   name: string;

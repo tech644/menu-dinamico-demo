@@ -2,6 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router";
 import { ReactNode } from "react";
 
+// Reusable top bar used across menu and recipe pages.
 interface HeaderProps {
   showBack?: boolean;
   title?: string;

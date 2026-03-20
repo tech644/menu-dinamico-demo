@@ -1,7 +1,8 @@
 import { Recipe } from "../services/recipeService";
 import { getRecipeImageUrl } from "../utils/recipeImage";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./media/ImageWithFallback";
 
+// Presentational card for a single recipe in the menu grid.
 interface RecipeCardProps {
   recipe: Recipe;
   onClick: () => void;

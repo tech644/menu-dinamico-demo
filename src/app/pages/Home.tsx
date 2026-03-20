@@ -6,6 +6,7 @@ import { resolveVenueCode } from "../services/venueResolverService";
 import NotFound from "./NotFound";
 import { MenuChooser } from "../components/MenuChooser";
 
+// Venue landing page: resolves venue code and shows available menus.
 export default function Home() {
   const { venueCode } = useParams<{ venueCode: string }>();
   const [menus, setMenus] = useState<Menu[]>([]);

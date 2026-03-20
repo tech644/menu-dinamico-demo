@@ -1,8 +1,9 @@
-import menuJson from "../../datamocked/menu.json";
-import recipesJson from "../../datamocked/ricette.json";
+import menuJson from "../data/mocks/menu.json";
+import recipesJson from "../data/mocks/ricette.json";
 import { Menu } from "./menuService";
 import { Ingredient, Recipe } from "./recipeService";
 
+// Demo-only service used by /menu_demo routes.
 const baseMenu = menuJson.menu as Menu;
 
 const demoMenus: Menu[] = [

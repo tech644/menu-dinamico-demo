@@ -6,6 +6,7 @@ import { getDemoMenus } from "../services/mockDemoService";
 import NotFound from "./NotFound";
 import { MenuChooser } from "../components/MenuChooser";
 
+// Demo-only menu list used for showcase and test routes.
 export default function MenuDemoList() {
   const { venueCode } = useParams<{ venueCode: string }>();
   const [menus, setMenus] = useState<Menu[]>([]);

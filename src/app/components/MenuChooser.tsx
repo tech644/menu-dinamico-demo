@@ -1,6 +1,7 @@
 import { Sparkles, UtensilsCrossed } from "lucide-react";
 import { Menu } from "../services/menuService";
 
+// Shared menu picker used by both production and demo listing pages.
 interface MenuChooserProps {
   title: string;
   subtitle: string;

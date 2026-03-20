@@ -2,6 +2,7 @@ import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/
 import { menuData } from "../data/menuData";
 import { getFirestoreDb, isFirebaseConfigured } from "./firebase";
 
+// Resolves route venue codes to business/local identifiers.
 export interface VenueContext {
   businessId: string;
   localId: string;

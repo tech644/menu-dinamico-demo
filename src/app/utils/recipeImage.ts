@@ -19,6 +19,7 @@ const DEMO_RECIPE_IMAGES = [
   "https://images.unsplash.com/photo-1600891964092-4316c288032e",
 ];
 
+// Stable hash used to select repeatable demo images for recipes.
 function hashString(value: string): number {
   let hash = 0;
   for (let i = 0; i < value.length; i += 1) {

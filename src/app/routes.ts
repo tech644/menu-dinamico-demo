@@ -7,6 +7,7 @@ import RecipeDetail from "./pages/RecipeDetail";
 import NotFound from "./pages/NotFound";
 import MenuDemoList from "./pages/MenuDemoList";
 
+// Central routing map for production and demo menu paths.
 export const router = createBrowserRouter([
   {
     path: "/",

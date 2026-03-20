@@ -3,6 +3,7 @@ import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/
 import { getFirestoreDb, isFirebaseConfigured } from "./firebase";
 import { VenueContext } from "./venueResolverService";
 
+// Menu data access with Firebase-first strategy and local fallback data.
 export interface MenuItem {
   itemId: string;
   type: string;

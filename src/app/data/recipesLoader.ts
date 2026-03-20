@@ -1,12 +1,8 @@
-// Recipe data loader - uses mock data that can be replaced with Firebase
+// Asynchronous loader for local recipe fallback data.
 import { recipesData } from './recipesData';
 
 export async function loadRecipesData() {
-  // Simulating async data loading
-  // TODO: Replace with Firebase Firestore call
-  // Example: const recipesRef = collection(db, 'recipes');
-  //          const snapshot = await getDocs(recipesRef);
-  //          return { recipes: snapshot.docs.map(doc => doc.data()) };
+  // Preserves async behavior so callers can keep a single data-loading flow.
   
   await new Promise(resolve => setTimeout(resolve, 50));
   return recipesData;

@@ -1,4 +1,4 @@
-// Recipes fallback data loaded from local demo mock source
-import recipesJson from "../../datamocked/ricette.json";
+// Recipes fallback data loaded from a single local mock source.
+import recipesJson from "./mocks/ricette.json";
 
 export const recipesData = recipesJson;

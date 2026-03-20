@@ -1,6 +1,7 @@
 import { Menu } from "./menuService";
 import { Recipe } from "./recipeService";
 
+// DeepL translation client with localStorage cache for menu and recipe content.
 export type SupportedLanguage = "it" | "en" | "es" | "fr" | "de";
 
 const CACHE_PREFIX = "ordinoo:menu-translations:v2";
