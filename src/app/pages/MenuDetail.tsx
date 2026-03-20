@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { useMatch, useNavigate, useParams } from "react-router";
 import { getMenuByIdForVenue, Menu, MenuSection } from "../services/menuService";
 import { getRecipesByIds, Recipe } from "../services/recipeService";
@@ -15,7 +15,19 @@ import {
   SheetTitle,
 } from "../components/ui/sheet";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
-import { AlertCircle, ChefHat, Loader2 } from "lucide-react";
+import {
+  AlertCircle,
+  ChevronRight,
+  ChefHat,
+  Info,
+  List,
+  Loader2,
+  MapPin,
+  Menu as MenuIcon,
+  Phone,
+  Share2,
+  ShieldAlert,
+} from "lucide-react";
 import { resolveVenueCode } from "../services/venueResolverService";
 import NotFound from "./NotFound";
 import {
@@ -112,6 +124,9 @@ export default function MenuDetail() {
   const [activeSection, setActiveSection] = useState<string>("");
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [mobileSheet, setMobileSheet] = useState<
+    "categories" | "allergens" | "contacts" | "share" | null
+  >(null);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
   const isScrollingProgrammatically = useRef(false);
   const isMobile = useIsMobile();
@@ -270,6 +285,24 @@ export default function MenuDetail() {
   const effectiveMenu = translatedMenu || menu;
   const effectiveRecipes = translatedRecipes.length > 0 ? translatedRecipes : recipes;
   const labels = UI_LABELS[language];
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+  const contactPhone = import.meta.env.VITE_CONTACT_PHONE?.trim() || "";
+  const contactAddress = import.meta.env.VITE_CONTACT_ADDRESS?.trim() || "";
+  const contactMapsUrl = import.meta.env.VITE_CONTACT_MAPS_URL?.trim() || "";
+  const reviewUrl = import.meta.env.VITE_REVIEW_URL?.trim() || "";
+  const facebookUrl = import.meta.env.VITE_FACEBOOK_URL?.trim() || "";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER?.trim() || "";
+  const emailAddress = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
+
+  const menuAllergens = useMemo(() => {
+    const allergenIds = new Set<string>();
+    for (const recipe of effectiveRecipes) {
+      for (const allergen of recipe.allergens || []) {
+        allergenIds.add(allergen);
+      }
+    }
+    return getAllergensInfo(Array.from(allergenIds));
+  }, [effectiveRecipes]);
 
   const getRecipesBySection = (section: MenuSection): Recipe[] => {
     return section.items
@@ -281,6 +314,38 @@ export default function MenuDetail() {
     const recipe = effectiveRecipes.find((item) => item.recipeId === recipeId) || null;
     setSelectedRecipe(recipe);
     setIsSheetOpen(true);
+  };
+
+  const openExternal = (url: string) => {
+    if (!url) return;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  const copyCurrentUrl = async () => {
+    if (!currentUrl) return;
+    try {
+      await navigator.clipboard.writeText(currentUrl);
+    } catch (error) {
+      console.error("Unable to copy URL", error);
+    }
+  };
+
+  const handleNativeShare = async () => {
+    if (!currentUrl) return;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: effectiveMenu.name,
+          text: `Guarda il menu ${effectiveMenu.name}`,
+          url: currentUrl,
+        });
+        return;
+      } catch (error) {
+        console.error("Native share canceled or failed", error);
+      }
+    }
+
+    await copyCurrentUrl();
   };
 
   if (loading) {
@@ -346,7 +411,7 @@ export default function MenuDetail() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      <div className={`max-w-7xl mx-auto px-4 py-6 ${isMobile ? "pb-28" : ""}`}>
         {language !== "it" && translationError && (
           <div className="mb-4 rounded-xl border border-[#f1d6db] bg-[#fff5f6] px-4 py-3 text-sm font-medium text-[#8b2f3f]">
             {translationError}
@@ -553,6 +618,220 @@ export default function MenuDetail() {
           )}
         </SheetContent>
       </Sheet>
+
+      {isMobile && (
+        <>
+          <Sheet open={Boolean(mobileSheet)} onOpenChange={(open) => !open && setMobileSheet(null)}>
+            <SheetContent
+              side="bottom"
+              className="h-auto max-h-[76vh] overflow-y-auto rounded-t-3xl px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+            >
+              <SheetHeader className="px-1 pb-2">
+                <SheetTitle className="text-2xl font-bold text-[#1b0736]">
+                  {mobileSheet === "categories" && "Categorie"}
+                  {mobileSheet === "allergens" && "Allergeni"}
+                  {mobileSheet === "contacts" && "Contatti"}
+                  {mobileSheet === "share" && "Condividi Menù"}
+                </SheetTitle>
+              </SheetHeader>
+
+              {mobileSheet === "categories" && (
+                <div className="space-y-2 pb-2">
+                  {effectiveMenu.sections.map((section) => (
+                    <div key={section.sectionId} className="rounded-2xl border border-[#e8e0f4] bg-white p-3">
+                      <button
+                        onClick={() => {
+                          handleCategoryChange(section.sectionId);
+                          setMobileSheet(null);
+                        }}
+                        className="flex w-full items-center justify-between text-left"
+                      >
+                        <span className="text-base font-semibold text-[#1b0736]">{section.name}</span>
+                        <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                      </button>
+                      {section.subSections?.length > 0 && (
+                        <ul className="mt-2 space-y-1 border-t border-[#f0eafb] pt-2">
+                          {section.subSections.map((subSection) => (
+                            <li key={subSection.subSectionId} className="text-sm text-[#6a5c86]">
+                              - {subSection.name}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {mobileSheet === "allergens" && (
+                <div className="grid grid-cols-2 gap-3 pb-2">
+                  {menuAllergens.length > 0 ? (
+                    menuAllergens.map((allergen) => (
+                      <div
+                        key={allergen.id}
+                        className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center"
+                      >
+                        <div className="mb-2 text-3xl">{getAllergenEmoji(allergen.name)}</div>
+                        <h3 className="text-sm font-semibold capitalize text-[#7d165f]">{allergen.name}</h3>
+                      </div>
+                    ))
+                  ) : (
+                    <p className="col-span-2 rounded-xl bg-[#f7f3ff] p-4 text-sm text-[#5f537d]">
+                      Nessun allergene disponibile in questo menù.
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {mobileSheet === "contacts" && (
+                <div className="space-y-2 pb-2">
+                  {contactPhone && (
+                    <a
+                      href={`tel:${contactPhone.replace(/\s+/g, "")}`}
+                      className="flex items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3"
+                    >
+                      <span className="flex items-center gap-3 text-[#1b0736]">
+                        <Phone className="h-5 w-5" />
+                        {contactPhone}
+                      </span>
+                      <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                    </a>
+                  )}
+                  {(contactMapsUrl || contactAddress) && (
+                    <button
+                      onClick={() =>
+                        openExternal(
+                          contactMapsUrl ||
+                            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactAddress)}`,
+                        )
+                      }
+                      className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left"
+                    >
+                      <span className="flex items-start gap-3 text-[#1b0736]">
+                        <MapPin className="mt-0.5 h-5 w-5 shrink-0" />
+                        <span>
+                          <span className="block font-semibold">Visualizza su Google Maps</span>
+                          {contactAddress && <span className="block text-sm text-[#6a5c86]">{contactAddress}</span>}
+                        </span>
+                      </span>
+                      <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                    </button>
+                  )}
+                  {!contactPhone && !contactMapsUrl && !contactAddress && (
+                    <p className="rounded-xl bg-[#f7f3ff] p-4 text-sm text-[#5f537d]">
+                      Nessun contatto configurato. Puoi impostarli con `VITE_CONTACT_PHONE`,
+                      `VITE_CONTACT_ADDRESS` e `VITE_CONTACT_MAPS_URL`.
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {mobileSheet === "share" && (
+                <div className="space-y-2 pb-2">
+                  <button
+                    onClick={handleNativeShare}
+                    className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left"
+                  >
+                    <span className="flex items-center gap-3 text-[#1b0736]">
+                      <Share2 className="h-5 w-5" />
+                      Condividi ora
+                    </span>
+                    <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                  </button>
+                  {reviewUrl && (
+                    <button
+                      onClick={() => openExternal(reviewUrl)}
+                      className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left"
+                    >
+                      <span className="flex items-center gap-3 text-[#1b0736]">
+                        <span className="text-lg">⭐</span>
+                        Lasciaci una recensione
+                      </span>
+                      <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                    </button>
+                  )}
+                  {facebookUrl && (
+                    <button
+                      onClick={() => openExternal(facebookUrl)}
+                      className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left text-[#1b0736]"
+                    >
+                      Facebook
+                      <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                    </button>
+                  )}
+                  <button
+                    onClick={() =>
+                      openExternal(
+                        whatsappNumber
+                          ? `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=${encodeURIComponent(
+                              `Guarda questo menu: ${currentUrl}`,
+                            )}`
+                          : `https://wa.me/?text=${encodeURIComponent(`Guarda questo menu: ${currentUrl}`)}`,
+                      )
+                    }
+                    className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left text-[#1b0736]"
+                  >
+                    WhatsApp
+                    <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                  </button>
+                  <a
+                    href={`mailto:${emailAddress}?subject=${encodeURIComponent(
+                      `Menu ${effectiveMenu.name}`,
+                    )}&body=${encodeURIComponent(`Guarda questo menu: ${currentUrl}`)}`}
+                    className="flex items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-[#1b0736]"
+                  >
+                    Email
+                    <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
+                  </a>
+                </div>
+              )}
+            </SheetContent>
+          </Sheet>
+
+          <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-[#e8e0f4] bg-white/95 backdrop-blur-md">
+            <div className="mx-auto flex h-[78px] max-w-7xl items-center justify-around px-2 pb-[env(safe-area-inset-bottom)]">
+              <button
+                onClick={() => {
+                  if (!venueCode) return;
+                  navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}`);
+                }}
+                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
+              >
+                <MenuIcon className="h-6 w-6" />
+                <span className="text-[11px] font-semibold uppercase tracking-wide">Menu</span>
+              </button>
+              <button
+                onClick={() => setMobileSheet("categories")}
+                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
+              >
+                <List className="h-6 w-6" />
+                <span className="text-[11px] font-semibold uppercase tracking-wide">Categoria</span>
+              </button>
+              <button
+                onClick={() => setMobileSheet("allergens")}
+                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
+              >
+                <ShieldAlert className="h-6 w-6" />
+                <span className="text-[11px] font-semibold uppercase tracking-wide">Allergeni</span>
+              </button>
+              <button
+                onClick={() => setMobileSheet("contacts")}
+                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
+              >
+                <Info className="h-6 w-6" />
+                <span className="text-[11px] font-semibold uppercase tracking-wide">Contatti</span>
+              </button>
+              <button
+                onClick={() => setMobileSheet("share")}
+                className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
+              >
+                <Share2 className="h-6 w-6" />
+                <span className="text-[11px] font-semibold uppercase tracking-wide">Condividi</span>
+              </button>
+            </div>
+          </nav>
+        </>
+      )}
     </div>
   );
 }
