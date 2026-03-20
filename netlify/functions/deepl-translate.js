@@ -59,7 +59,6 @@ exports.handler = async function handler(event) {
   for (let index = 0; index < texts.length; index += chunkSize) {
     const chunk = texts.slice(index, index + chunkSize);
     const form = new URLSearchParams();
-    form.set("auth_key", apiKey);
     form.set("source_lang", sourceLang);
     form.set("target_lang", targetLang);
     chunk.forEach((text) => form.append("text", text));
@@ -68,6 +67,7 @@ exports.handler = async function handler(event) {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: `DeepL-Auth-Key ${apiKey}`,
       },
       body: form.toString(),
     });
