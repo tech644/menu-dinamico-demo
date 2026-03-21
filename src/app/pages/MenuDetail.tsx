@@ -21,8 +21,10 @@ import {
   ChevronRight,
   List,
   Loader2,
+  Mail,
   MapPin,
   Menu as MenuIcon,
+  MessageCircle,
   Phone,
   Search,
   Share2,
@@ -287,8 +289,6 @@ export default function MenuDetail() {
   const contactPhone = import.meta.env.VITE_CONTACT_PHONE?.trim() || "";
   const contactAddress = import.meta.env.VITE_CONTACT_ADDRESS?.trim() || "";
   const contactMapsUrl = import.meta.env.VITE_CONTACT_MAPS_URL?.trim() || "";
-  const reviewUrl = import.meta.env.VITE_REVIEW_URL?.trim() || "";
-  const facebookUrl = import.meta.env.VITE_FACEBOOK_URL?.trim() || "";
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER?.trim() || "";
   const emailAddress = import.meta.env.VITE_CONTACT_EMAIL?.trim() || "";
 
@@ -737,27 +737,6 @@ export default function MenuDetail() {
                     </span>
                     <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
                   </button>
-                  {reviewUrl && (
-                    <button
-                      onClick={() => openExternal(reviewUrl)}
-                      className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left"
-                    >
-                      <span className="flex items-center gap-3 text-[#1b0736]">
-                        <span className="text-lg">⭐</span>
-                        Lasciaci una recensione
-                      </span>
-                      <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
-                    </button>
-                  )}
-                  {facebookUrl && (
-                    <button
-                      onClick={() => openExternal(facebookUrl)}
-                      className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left text-[#1b0736]"
-                    >
-                      Facebook
-                      <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
-                    </button>
-                  )}
                   <button
                     onClick={() =>
                       openExternal(
@@ -770,7 +749,10 @@ export default function MenuDetail() {
                     }
                     className="flex w-full items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-left text-[#1b0736]"
                   >
-                    WhatsApp
+                    <span className="flex items-center gap-3">
+                      <MessageCircle className="h-5 w-5" />
+                      WhatsApp
+                    </span>
                     <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
                   </button>
                   <a
@@ -779,7 +761,10 @@ export default function MenuDetail() {
                     )}&body=${encodeURIComponent(`Guarda questo menu: ${currentUrl}`)}`}
                     className="flex items-center justify-between rounded-xl border border-[#ece4f6] px-4 py-3 text-[#1b0736]"
                   >
-                    Email
+                    <span className="flex items-center gap-3">
+                      <Mail className="h-5 w-5" />
+                      Email
+                    </span>
                     <ChevronRight className="h-5 w-5 text-[#6a5c86]" />
                   </a>
                 </div>
