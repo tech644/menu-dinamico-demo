@@ -129,6 +129,7 @@ export default function MenuDetail() {
   const [searchQuery, setSearchQuery] = useState("");
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
   const isScrollingProgrammatically = useRef(false);
+  const pendingProgrammaticSectionId = useRef<string | null>(null);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -229,44 +230,69 @@ export default function MenuDetail() {
   }, [language, menu, recipes]);
 
   useEffect(() => {
-    // Keep section tabs aligned with the section currently visible on screen.
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (isScrollingProgrammatically.current) return;
-        
-        // Consider only sections currently intersecting the viewport.
-        const visibleEntries = entries.filter(entry => entry.isIntersecting);
-        
-        if (visibleEntries.length > 0) {
-          // Pick the section nearest to the content focus line below the sticky header.
-          const mostVisible = visibleEntries.reduce((prev, current) => {
-            const prevTop = prev.boundingClientRect.top;
-            const currentTop = current.boundingClientRect.top;
-            
-            // If both are above the focus line, keep the lower one as active.
-            if (prevTop < 100 && currentTop < 100) {
-              return prevTop > currentTop ? prev : current;
-            }
-            
-            // Otherwise use the nearest one to the focus line.
-            return Math.abs(currentTop - 100) < Math.abs(prevTop - 100) ? current : prev;
-          });
-          
-          setActiveSection(mostVisible.target.id);
+    const menuForSections = translatedMenu || menu;
+    if (!menuForSections) return;
+
+    // Activation line slightly below sticky header+tabs to prevent early switching.
+    const activationLine = isMobile ? 168 : 154;
+    let rafId: number | null = null;
+
+    const computeActiveSection = () => {
+      if (!menuForSections.sections.length) return;
+
+      // During programmatic scroll, keep the intended tab active until its section reaches the activation line.
+      if (isScrollingProgrammatically.current) {
+        const targetId = pendingProgrammaticSectionId.current;
+        if (targetId) {
+          const targetEl = sectionRefs.current[targetId];
+          if (targetEl && targetEl.getBoundingClientRect().top <= activationLine + 8) {
+            isScrollingProgrammatically.current = false;
+            pendingProgrammaticSectionId.current = null;
+            setActiveSection(targetId);
+          }
         }
-      },
-      {
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-        rootMargin: "-100px 0px -40% 0px",
+        return;
       }
-    );
 
-    Object.values(sectionRefs.current).forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+      const orderedSections = menuForSections.sections
+        .map((section) => ({
+          id: section.sectionId,
+          top: sectionRefs.current[section.sectionId]?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY,
+        }))
+        .filter((section) => Number.isFinite(section.top));
 
-    return () => observer.disconnect();
-  }, [menu]);
+      if (!orderedSections.length) return;
+
+      const nextIndex = orderedSections.findIndex((section) => section.top > activationLine);
+      const resolvedIndex =
+        nextIndex === -1 ? orderedSections.length - 1 : Math.max(0, nextIndex - 1);
+      const resolvedSectionId = orderedSections[resolvedIndex]?.id;
+
+      if (resolvedSectionId) {
+        setActiveSection((prev) => (prev === resolvedSectionId ? prev : resolvedSectionId));
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId !== null) return;
+      rafId = window.requestAnimationFrame(() => {
+        computeActiveSection();
+        rafId = null;
+      });
+    };
+
+    computeActiveSection();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId);
+      }
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [isMobile, menu, translatedMenu]);
 
   const handleCategoryChange = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -274,11 +300,8 @@ export default function MenuDetail() {
     
     if (element) {
       isScrollingProgrammatically.current = true;
+      pendingProgrammaticSectionId.current = sectionId;
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      
-      setTimeout(() => {
-        isScrollingProgrammatically.current = false;
-      }, 1000);
     }
   };
 

@@ -27,8 +27,14 @@ export function CategoryTabs({
       const containerRect = container.getBoundingClientRect();
       const buttonRect = button.getBoundingClientRect();
 
-      const scrollLeft = buttonRect.left - containerRect.left - (containerRect.width / 2) + (buttonRect.width / 2);
-      container.scrollTo({ left: container.scrollLeft + scrollLeft, behavior: 'smooth' });
+      const nextLeft =
+        container.scrollLeft +
+        (buttonRect.left - containerRect.left - containerRect.width / 2 + buttonRect.width / 2);
+
+      // Avoid tiny re-centering motions that can look like jitter.
+      if (Math.abs(nextLeft - container.scrollLeft) > 6) {
+        container.scrollTo({ left: nextLeft, behavior: "smooth" });
+      }
     }
   }, [activeCategory]);
 
@@ -57,10 +63,11 @@ export function CategoryTabs({
                 ref={isActive ? activeButtonRef : null}
                 onClick={() => onCategoryChange(category)}
                 className={`
-                  px-6 py-2 rounded-full whitespace-nowrap font-medium text-sm transition-all
+                  min-h-11 rounded-full border px-6 py-2 text-sm font-medium whitespace-nowrap
+                  transition-[background-color,color,border-color,box-shadow] duration-200 ease-out
                   ${isActive 
-                    ? 'text-white shadow-md ord-cta' 
-                    : 'bg-white text-[#4a3f63] border border-[#d7caec] hover:border-[#9f86d7]'
+                    ? 'ord-cta border-transparent text-white shadow-md' 
+                    : 'border-[#d7caec] bg-white text-[#4a3f63] hover:border-[#9f86d7]'
                   }
                 `}
               >
