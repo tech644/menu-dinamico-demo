@@ -3,10 +3,10 @@ import { useParams } from "react-router";
 import { getRecipeById, Recipe } from "../services/recipeService";
 import { getAllergensInfo } from "../services/allergenService";
 import { Header } from "../components/Header";
-import { ImageWithFallback } from "../components/media/ImageWithFallback";
+// import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import { LoadingSpinner } from "../components/LoadingSpinner";
 import { AlertCircle, ChefHat } from "lucide-react";
-import { getRecipeImageUrl } from "../utils/recipeImage";
+// import { getRecipeImageUrl } from "../utils/recipeImage";
 
 // Recipe detail page with hero image, ingredients, allergen info, and pricing.
 export default function RecipeDetail() {
@@ -49,7 +49,8 @@ export default function RecipeDetail() {
     <div className="ord-page-bg min-h-screen">
       <Header showBack={true} />
       
-      {/* Hero Image */}
+      {/*
+      Hero Image (temporaneamente nascosta)
       <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#efe6ff] to-[#e9fdf8] md:h-96">
         <ImageWithFallback
           src={getRecipeImageUrl(recipe, "hero")}
@@ -58,6 +59,7 @@ export default function RecipeDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       </div>
+      */}
 
       <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-10">
         {/* Recipe Card */}

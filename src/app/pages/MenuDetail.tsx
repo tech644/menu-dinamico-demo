@@ -7,7 +7,7 @@ import { Header } from "../components/Header";
 import { CategoryTabs } from "../components/CategoryTabs";
 import { RecipeCard } from "../components/RecipeCard";
 import { LoadingSpinner } from "../components/LoadingSpinner";
-import { ImageWithFallback } from "../components/media/ImageWithFallback";
+// import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import {
   Sheet,
   SheetContent,
@@ -45,7 +45,7 @@ import {
   SelectTrigger,
 } from "../components/ui/select";
 import { useIsMobile } from "../components/ui/use-mobile";
-import { getRecipeImageUrl } from "../utils/recipeImage";
+// import { getRecipeImageUrl } from "../utils/recipeImage";
 import { Input } from "../components/ui/input";
 
 // Menu detail page with section navigation, recipe sheet, translation, and venue contacts.
@@ -494,7 +494,8 @@ export default function MenuDetail() {
                 <SheetTitle>{selectedRecipe.name}</SheetTitle>
               </SheetHeader>
               
-              {/* Hero Image */}
+              {/*
+              Hero Image (temporaneamente nascosta)
               <div className="relative mb-6 h-48 overflow-hidden rounded-xl bg-gradient-to-br from-[#efe6ff] to-[#e9fdf8] md:h-64">
                 <ImageWithFallback
                   src={getRecipeImageUrl(selectedRecipe, "hero")}
@@ -503,6 +504,7 @@ export default function MenuDetail() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
+              */}
 
               {/* Recipe Card */}
               <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6">

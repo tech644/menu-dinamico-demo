@@ -1,6 +1,6 @@
 import { Recipe } from "../services/recipeService";
-import { getRecipeImageUrl } from "../utils/recipeImage";
-import { ImageWithFallback } from "./media/ImageWithFallback";
+// import { getRecipeImageUrl } from "../utils/recipeImage";
+// import { ImageWithFallback } from "./media/ImageWithFallback";
 
 // Presentational card for a single recipe in the menu grid.
 interface RecipeCardProps {
@@ -9,7 +9,7 @@ interface RecipeCardProps {
 }
 
 export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
-  const imageUrl = getRecipeImageUrl(recipe, "card");
+  // const imageUrl = getRecipeImageUrl(recipe, "card");
   const allergensLabel =
     recipe.allergens && recipe.allergens.length > 0
       ? recipe.allergens.join(", ")
@@ -21,6 +21,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
       onClick={onClick}
       className="flex h-full w-full min-w-0 appearance-none flex-col overflow-hidden rounded-2xl border border-[#e8e0f4] bg-white p-0 text-left shadow-sm transition-shadow duration-300 hover:shadow-md"
     >
+      {/*
       <div className="relative h-56 overflow-hidden bg-gradient-to-br from-[#f1e8ff] to-[#e9fdf8]">
         <ImageWithFallback
           src={imageUrl}
@@ -29,6 +30,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
           loading="lazy"
         />
       </div>
+      */}
 
       <div className="flex w-full min-w-0 flex-1 flex-col p-4">
         <div className="mb-2 flex w-full min-w-0 items-start gap-2">
