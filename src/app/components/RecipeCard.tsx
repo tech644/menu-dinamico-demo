@@ -43,7 +43,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
         </div>
         
         {recipe.description && (
-          <p className="mb-2 min-h-[3.25rem] line-clamp-2 text-sm text-[#60547d]">
+          <p className="mb-2 text-sm leading-relaxed text-[#60547d]">
             {recipe.description}
           </p>
         )}
