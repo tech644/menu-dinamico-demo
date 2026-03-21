@@ -2,6 +2,7 @@
 
 :root {
   --font-size: 16px;
+  --ord-font-family: "Neulis Alt", "Avenir Next", "Century Gothic", ui-sans-serif, system-ui, sans-serif;
   --ordinoo-purple-900: #14042a;
   --ordinoo-purple-800: #1b0736;
   --ordinoo-purple-700: #2a0a4a;
@@ -133,7 +134,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Neulis Alt", "Avenir Next", "Century Gothic", ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--ord-font-family);
     color: var(--ordinoo-ink);
   }
 

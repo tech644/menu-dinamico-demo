@@ -19,7 +19,7 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
     <button
       type="button"
       onClick={onClick}
-      className="flex h-full w-full min-w-0 appearance-none flex-col overflow-hidden rounded-2xl border border-[#e8e0f4] bg-white p-0 text-left shadow-sm transition-shadow duration-300 hover:shadow-md"
+      className="ord-recipe-card flex h-full w-full min-w-0 appearance-none flex-col overflow-hidden border bg-white p-0 text-left transition-shadow duration-300 hover:shadow-md"
     >
       {/*
       <div className="relative h-56 overflow-hidden bg-gradient-to-br from-[#f1e8ff] to-[#e9fdf8]">

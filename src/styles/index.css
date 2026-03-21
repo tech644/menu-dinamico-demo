@@ -2,6 +2,90 @@
 @import './tailwind.css';
 @import './theme.css';
 
+:root {
+  --ord-bg-spot-1: rgba(42, 235, 201, 0.18);
+  --ord-bg-spot-2: rgba(255, 29, 187, 0.17);
+  --ord-bg-from: #f7f3ff;
+  --ord-bg-mid: #f5f2fb;
+  --ord-bg-to: #f2edf8;
+  --ord-cta-from: #1b0736;
+  --ord-cta-to: #2a0a4a;
+  --ord-cta-shadow: rgba(27, 7, 54, 0.28);
+  --ord-cta-radius: 9999px;
+  --ord-cta-letter-spacing: normal;
+  --ord-cta-font-weight: 600;
+  --ord-cta-transform: none;
+  --ord-accent-from: #2aebc9;
+  --ord-accent-to: #ff1dbb;
+  --ord-font-family: "Neulis Alt", "Avenir Next", "Century Gothic", ui-sans-serif, system-ui, sans-serif;
+  --ord-menu-card-radius: 24px;
+  --ord-menu-card-shadow: 0 14px 40px rgba(42, 10, 74, 0.12);
+  --ord-menu-card-hover-shadow: 0 20px 45px rgba(42, 10, 74, 0.2);
+  --ord-menu-card-border: rgba(255, 255, 255, 0.6);
+  --ord-recipe-card-radius: 16px;
+  --ord-recipe-card-border: #e8e0f4;
+  --ord-recipe-card-shadow: 0 2px 10px rgba(42, 10, 74, 0.08);
+  --ord-detail-card-radius: 16px;
+  --ord-detail-card-shadow: 0 20px 40px rgba(42, 10, 74, 0.16);
+  --ord-template-tile-radius: 16px;
+}
+
+:root[data-menu-template="ocean"] {
+  --ord-bg-spot-1: rgba(16, 185, 129, 0.12);
+  --ord-bg-spot-2: rgba(59, 130, 246, 0.2);
+  --ord-bg-from: #eff9ff;
+  --ord-bg-mid: #e9f4ff;
+  --ord-bg-to: #e2eeff;
+  --ord-cta-from: #0f172a;
+  --ord-cta-to: #1d4ed8;
+  --ord-cta-shadow: rgba(29, 78, 216, 0.34);
+  --ord-cta-radius: 14px;
+  --ord-cta-letter-spacing: 0.03em;
+  --ord-cta-font-weight: 700;
+  --ord-cta-transform: uppercase;
+  --ord-accent-from: #06b6d4;
+  --ord-accent-to: #2563eb;
+  --ord-font-family: "Inter", "Neulis Alt", ui-sans-serif, system-ui, sans-serif;
+  --ord-menu-card-radius: 14px;
+  --ord-menu-card-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+  --ord-menu-card-hover-shadow: 0 16px 36px rgba(37, 99, 235, 0.22);
+  --ord-menu-card-border: rgba(29, 78, 216, 0.24);
+  --ord-recipe-card-radius: 12px;
+  --ord-recipe-card-border: rgba(37, 99, 235, 0.22);
+  --ord-recipe-card-shadow: 0 8px 20px rgba(59, 130, 246, 0.12);
+  --ord-detail-card-radius: 14px;
+  --ord-detail-card-shadow: 0 16px 34px rgba(37, 99, 235, 0.16);
+  --ord-template-tile-radius: 10px;
+}
+
+:root[data-menu-template="ember"] {
+  --ord-bg-spot-1: rgba(251, 146, 60, 0.28);
+  --ord-bg-spot-2: rgba(180, 83, 9, 0.2);
+  --ord-bg-from: #fff6e8;
+  --ord-bg-mid: #ffeedb;
+  --ord-bg-to: #ffe5ca;
+  --ord-cta-from: #111827;
+  --ord-cta-to: #7c2d12;
+  --ord-cta-shadow: rgba(17, 24, 39, 0.3);
+  --ord-cta-radius: 10px;
+  --ord-cta-letter-spacing: 0.01em;
+  --ord-cta-font-weight: 700;
+  --ord-cta-transform: none;
+  --ord-accent-from: #f97316;
+  --ord-accent-to: #b45309;
+  --ord-font-family: "Avenir Next", "Neulis Alt", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --ord-menu-card-radius: 26px 10px 26px 10px;
+  --ord-menu-card-shadow: 0 14px 34px rgba(124, 45, 18, 0.16);
+  --ord-menu-card-hover-shadow: 0 18px 40px rgba(124, 45, 18, 0.24);
+  --ord-menu-card-border: rgba(180, 83, 9, 0.28);
+  --ord-recipe-card-radius: 22px 8px 22px 8px;
+  --ord-recipe-card-border: rgba(180, 83, 9, 0.26);
+  --ord-recipe-card-shadow: 0 10px 24px rgba(180, 83, 9, 0.14);
+  --ord-detail-card-radius: 24px 10px 24px 10px;
+  --ord-detail-card-shadow: 0 18px 38px rgba(124, 45, 18, 0.2);
+  --ord-template-tile-radius: 22px 8px 22px 8px;
+}
+
 /* Custom scrollbar hide utility */
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -14,23 +98,52 @@
 
 .ord-page-bg {
   background:
-    radial-gradient(circle at 20% -10%, rgba(42, 235, 201, 0.18), transparent 35%),
-    radial-gradient(circle at 90% 20%, rgba(255, 29, 187, 0.17), transparent 40%),
-    linear-gradient(135deg, #f7f3ff 0%, #f5f2fb 50%, #f2edf8 100%);
+    radial-gradient(circle at 20% -10%, var(--ord-bg-spot-1), transparent 35%),
+    radial-gradient(circle at 90% 20%, var(--ord-bg-spot-2), transparent 40%),
+    linear-gradient(135deg, var(--ord-bg-from) 0%, var(--ord-bg-mid) 50%, var(--ord-bg-to) 100%);
 }
 
 .ord-cta {
-  background: linear-gradient(135deg, var(--ordinoo-purple-800), var(--ordinoo-purple-700));
+  background: linear-gradient(135deg, var(--ord-cta-from), var(--ord-cta-to));
   color: #fff;
+  border-radius: var(--ord-cta-radius);
+  letter-spacing: var(--ord-cta-letter-spacing);
+  font-weight: var(--ord-cta-font-weight);
+  text-transform: var(--ord-cta-transform);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .ord-cta:hover {
   filter: brightness(1.08);
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(27, 7, 54, 0.28);
+  box-shadow: 0 12px 28px var(--ord-cta-shadow);
 }
 
 .ord-accent-line {
-  background: linear-gradient(90deg, var(--ordinoo-cyan), var(--ordinoo-pink));
+  background: linear-gradient(90deg, var(--ord-accent-from), var(--ord-accent-to));
+}
+
+.ord-menu-card {
+  border-radius: var(--ord-menu-card-radius);
+  border-color: var(--ord-menu-card-border);
+  box-shadow: var(--ord-menu-card-shadow);
+}
+
+.ord-menu-card:hover {
+  box-shadow: var(--ord-menu-card-hover-shadow);
+}
+
+.ord-recipe-card {
+  border-radius: var(--ord-recipe-card-radius);
+  border-color: var(--ord-recipe-card-border);
+  box-shadow: var(--ord-recipe-card-shadow);
+}
+
+.ord-detail-card {
+  border-radius: var(--ord-detail-card-radius);
+  box-shadow: var(--ord-detail-card-shadow);
+}
+
+.ord-template-tile {
+  border-radius: var(--ord-template-tile-radius);
 }

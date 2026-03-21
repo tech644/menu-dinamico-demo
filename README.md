@@ -1,4 +1,4 @@
-# Restaurant Menu Web App - Nativa
+# Restaurant Menu Web App - Ristorante Belvedere
 
 Web app per la navigazione dei menu di ristorante, con dettaglio ricette, ingredienti e allergeni.
 
@@ -110,7 +110,7 @@ DEEPL_API_KEY=your_deepl_key
 ## Design
 
 L'interfaccia è ispirata a un design moderno per ristoranti italiani:
-- Header con logo "Nativa" e bandiera italiana
+- Header con logo "Ristorante Belvedere" e bandiera italiana
 - Palette colori caldi (arancio, rosso)
 - Card moderne con ombre e bordi arrotondati
 - Transizioni fluide e animazioni

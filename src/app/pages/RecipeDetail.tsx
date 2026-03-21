@@ -3,12 +3,14 @@ import { useParams } from "react-router";
 import { getRecipeById, Recipe } from "../services/recipeService";
 import { getAllergensInfo } from "../services/allergenService";
 import { Header } from "../components/Header";
+import { LocalDemoLogo } from "../components/LocalDemoLogo";
+import { AllergenIcon } from "../components/AllergenIcon";
 // import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import { LoadingSpinner } from "../components/LoadingSpinner";
-import { AlertCircle, ChefHat } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 // import { getRecipeImageUrl } from "../utils/recipeImage";
 
-// Recipe detail page with hero image, ingredients, allergen info, and pricing.
+// Recipe detail page with hero image, allergen info, and pricing.
 export default function RecipeDetail() {
   const { recipeId } = useParams<{ recipeId: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
@@ -47,7 +49,7 @@ export default function RecipeDetail() {
 
   return (
     <div className="ord-page-bg min-h-screen">
-      <Header showBack={true} />
+      <Header showBack={true} leftContent={<LocalDemoLogo showName={false} size="sm" className="mr-1" />} />
       
       {/*
       Hero Image (temporaneamente nascosta)
@@ -63,7 +65,7 @@ export default function RecipeDetail() {
 
       <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-10">
         {/* Recipe Card */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-6">
+        <div className="ord-detail-card bg-white p-6 md:p-8 mb-6">
           <div className="flex justify-between items-start mb-4">
             <h1 className="flex-1 text-3xl font-bold text-[#1b0736] md:text-4xl">
               {recipe.name}
@@ -81,47 +83,27 @@ export default function RecipeDetail() {
             </p>
           )}
 
-          {/* Ingredients */}
-          {recipe.ingredients && recipe.ingredients.length > 0 && (
-            <div className="mb-6">
-              <div className="flex items-center gap-2 mb-3">
-                <ChefHat className="h-5 w-5 text-[#2a0a4a]" />
-                <h2 className="text-xl font-semibold text-[#1b0736]">Ingredienti</h2>
-              </div>
-              <div className="rounded-xl bg-[#f7f3ff] p-4">
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {recipe.ingredients.map((ingredient, index) => (
-                    <li key={index} className="flex items-center gap-2 text-gray-700">
-                      <span className="w-1.5 h-1.5 bg-orange-600 rounded-full"></span>
-                      <span className="capitalize">{ingredient.name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
           {/* Allergens */}
           {allergensInfo.length > 0 && (
             <div className="border-t border-gray-200 pt-6">
-              <div className="flex items-start gap-2 mb-3">
-                <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                <div className="flex-1">
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Allergeni</h2>
-                  <div className="space-y-3">
-                    {allergensInfo.map((allergen) => (
-                      <div
-                        key={allergen.id}
-                        className="bg-red-50 border border-red-200 rounded-lg p-3"
-                      >
-                        <h3 className="font-semibold text-red-900 capitalize mb-1">
-                          {allergen.name}
-                        </h3>
-                        <p className="text-sm text-red-700">{allergen.description}</p>
-                      </div>
-                    ))}
+              <div className="mb-3 flex items-center gap-2">
+                <AlertCircle className="h-5 w-5 text-[#ff1dbb]" />
+                <h2 className="text-xl font-semibold text-[#1b0736]">Allergeni</h2>
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                {allergensInfo.map((allergen) => (
+                  <div
+                    key={allergen.id}
+                    className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center"
+                  >
+                    <span className="mx-auto mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#e9dcfb] bg-white text-[#5f537d]">
+                      <AllergenIcon allergenName={allergen.name} className="h-4 w-4" />
+                    </span>
+                    <span className="text-sm font-semibold capitalize text-[#7d165f]">
+                      {allergen.name}
+                    </span>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           )}

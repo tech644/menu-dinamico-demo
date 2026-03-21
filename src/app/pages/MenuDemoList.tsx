@@ -54,7 +54,9 @@ export default function MenuDemoList() {
       subtitle="Versione  per test e presentazioni"
       ctaLabel="Entra Nel Menu Demo"
       menus={menus}
-      onOpenMenu={(menuId) => navigate(`/${venueCode}/menu_demo/${menuId}`)}
+      onOpenMenu={(menuId, templateId) =>
+        navigate(`/${venueCode}/menu_demo/${menuId}?template=${encodeURIComponent(templateId)}`)
+      }
     />
   );
 }

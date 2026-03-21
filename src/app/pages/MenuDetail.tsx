@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, useRef } from "react";
-import { useMatch, useNavigate, useParams } from "react-router";
+import { useLocation, useMatch, useNavigate, useParams } from "react-router";
 import { getMenuByIdForVenue, Menu, MenuSection } from "../services/menuService";
 import { getRecipesByIds, Recipe } from "../services/recipeService";
 import { getAllergensInfo } from "../services/allergenService";
@@ -7,6 +7,8 @@ import { Header } from "../components/Header";
 import { CategoryTabs } from "../components/CategoryTabs";
 import { RecipeCard } from "../components/RecipeCard";
 import { LoadingSpinner } from "../components/LoadingSpinner";
+import { LocalDemoLogo } from "../components/LocalDemoLogo";
+import { AllergenIcon } from "../components/AllergenIcon";
 // import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import {
   Sheet,
@@ -14,11 +16,9 @@ import {
   SheetHeader,
   SheetTitle,
 } from "../components/ui/sheet";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import {
   AlertCircle,
   ChevronRight,
-  ChefHat,
   List,
   Loader2,
   MapPin,
@@ -62,7 +62,6 @@ const UI_LABELS: Record<
   {
     menu: string;
     allergens: string;
-    ingredients: string;
     noRecipes: string;
     recipeNotFound: string;
     translating: string;
@@ -71,7 +70,6 @@ const UI_LABELS: Record<
   it: {
     menu: "Menu",
     allergens: "Allergeni",
-    ingredients: "Ingredienti",
     noRecipes: "Nessuna ricetta disponibile in questa sezione",
     recipeNotFound: "Ricetta non trovata",
     translating: "Traduzione in corso...",
@@ -79,7 +77,6 @@ const UI_LABELS: Record<
   en: {
     menu: "Menu",
     allergens: "Allergens",
-    ingredients: "Ingredients",
     noRecipes: "No recipes available in this section",
     recipeNotFound: "Recipe not found",
     translating: "Translating...",
@@ -87,7 +84,6 @@ const UI_LABELS: Record<
   es: {
     menu: "Menú",
     allergens: "Alérgenos",
-    ingredients: "Ingredientes",
     noRecipes: "No hay recetas disponibles en esta sección",
     recipeNotFound: "Receta no encontrada",
     translating: "Traduciendo...",
@@ -95,7 +91,6 @@ const UI_LABELS: Record<
   fr: {
     menu: "Menu",
     allergens: "Allergènes",
-    ingredients: "Ingrédients",
     noRecipes: "Aucune recette disponible dans cette section",
     recipeNotFound: "Recette introuvable",
     translating: "Traduction en cours...",
@@ -103,7 +98,6 @@ const UI_LABELS: Record<
   de: {
     menu: "Menü",
     allergens: "Allergene",
-    ingredients: "Zutaten",
     noRecipes: "Keine Rezepte in diesem Bereich verfügbar",
     recipeNotFound: "Rezept nicht gefunden",
     translating: "Übersetzung läuft...",
@@ -113,6 +107,7 @@ const UI_LABELS: Record<
 export default function MenuDetail() {
   const { venueCode, menuId } = useParams<{ venueCode: string; menuId: string }>();
   const isDemoRoute = Boolean(useMatch("/:venueCode/menu_demo/:menuId"));
+  const location = useLocation();
   const navigate = useNavigate();
   const [menu, setMenu] = useState<Menu | null>(null);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -329,6 +324,10 @@ export default function MenuDetail() {
     }
     return effectiveRecipes.filter((recipe) => recipe.name.toLowerCase().includes(normalizedSearchQuery));
   }, [effectiveRecipes, normalizedSearchQuery]);
+  const activeTemplate = useMemo(() => {
+    const value = new URLSearchParams(location.search).get("template");
+    return value ? `?template=${encodeURIComponent(value)}` : "";
+  }, [location.search]);
 
   const getRecipesBySection = (section: MenuSection): Recipe[] => {
     return section.items
@@ -391,6 +390,7 @@ export default function MenuDetail() {
       <Header
         showBack={false}
         title={effectiveMenu.name}
+        leftContent={<LocalDemoLogo showName={false} size="sm" className="mr-1" />}
         rightContent={
           <Select
             value={language}
@@ -429,7 +429,7 @@ export default function MenuDetail() {
         leadingActionLabel={labels.menu}
         onLeadingActionClick={() => {
           if (!venueCode) return;
-          navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}`);
+          navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}${activeTemplate}`);
         }}
         onCategoryChange={(name) => {
           const section = effectiveMenu.sections.find(s => s.name === name);
@@ -507,7 +507,7 @@ export default function MenuDetail() {
               */}
 
               {/* Recipe Card */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6">
+              <div className="ord-detail-card bg-white p-6 md:p-8 mb-6">
                 <div className="flex justify-between items-start mb-4">
                   <h1 className="flex-1 text-2xl font-bold text-[#1b0736] md:text-3xl">
                     {selectedRecipe.name}
@@ -531,107 +531,29 @@ export default function MenuDetail() {
                   </p>
                 )}
 
-                {/* Ingredients & Allergens - Conditional Tabs or Direct Display */}
-                {(() => {
-                  const hasAllergens = selectedRecipe.allergens && selectedRecipe.allergens.length > 0;
-                  const hasIngredients = selectedRecipe.ingredients && selectedRecipe.ingredients.length > 0;
-
-                  // If both exist, show tabs with allergens first
-                  if (hasAllergens && hasIngredients) {
-                    return (
-                      <Tabs defaultValue="allergens" className="mb-6">
-                        <TabsList className="grid w-full grid-cols-2">
-                          <TabsTrigger value="allergens" className="gap-2">
-                            <AlertCircle className="w-4 h-4" />
-                            {labels.allergens}
-                          </TabsTrigger>
-                          <TabsTrigger value="ingredients" className="gap-2">
-                            <ChefHat className="w-4 h-4" />
-                            {labels.ingredients}
-                          </TabsTrigger>
-                        </TabsList>
-
-                        <TabsContent value="allergens" className="mt-4">
-                          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                            {getAllergensInfo(selectedRecipe.allergens).map((allergen) => (
-                              <div
-                                key={allergen.id}
-                                className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center transition-shadow hover:shadow-md"
-                              >
-                                <div className="text-3xl mb-2">{getAllergenMarker(allergen.name)}</div>
-                                <h3 className="text-sm font-semibold capitalize text-[#7d165f]">
-                                  {allergen.name}
-                                </h3>
-                              </div>
-                            ))}
-                          </div>
-                        </TabsContent>
-
-                        <TabsContent value="ingredients" className="mt-4">
-                          <div className="rounded-xl bg-[#f7f3ff] p-4">
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                              {selectedRecipe.ingredients.map((ingredient, index) => (
-                                <li key={index} className="flex items-center gap-2 text-[#4a3f63]">
-                                  <span className="h-1.5 w-1.5 rounded-full bg-[#ff1dbb]"></span>
-                                  <span className="capitalize">{ingredient.name}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </TabsContent>
-                      </Tabs>
-                    );
-                  }
-
-                  // If only allergens exist, show allergens directly
-                  if (hasAllergens) {
-                    return (
-                      <div className="mb-6">
-                        <div className="flex items-center gap-2 mb-3">
-                          <AlertCircle className="h-5 w-5 text-[#ff1dbb]" />
-                          <h2 className="text-xl font-semibold text-[#1b0736]">{labels.allergens}</h2>
+                {selectedRecipe.allergens && selectedRecipe.allergens.length > 0 && (
+                  <div className="mb-6">
+                    <div className="mb-3 flex items-center gap-2">
+                      <AlertCircle className="h-5 w-5 text-[#ff1dbb]" />
+                      <h2 className="text-xl font-semibold text-[#1b0736]">{labels.allergens}</h2>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+                      {getAllergensInfo(selectedRecipe.allergens).map((allergen) => (
+                        <div
+                          key={allergen.id}
+                          className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center transition-shadow hover:shadow-md"
+                        >
+                          <span className="mx-auto mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#e9dcfb] bg-white text-[#5f537d]">
+                            <AllergenIcon allergenName={allergen.name} className="h-4 w-4" />
+                          </span>
+                          <span className="text-sm font-semibold capitalize text-[#7d165f]">
+                            {allergen.name}
+                          </span>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                          {getAllergensInfo(selectedRecipe.allergens).map((allergen) => (
-                            <div
-                              key={allergen.id}
-                              className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center transition-shadow hover:shadow-md"
-                            >
-                              <div className="text-3xl mb-2">{getAllergenMarker(allergen.name)}</div>
-                              <h3 className="text-sm font-semibold capitalize text-[#7d165f]">
-                                {allergen.name}
-                              </h3>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    );
-                  }
-
-                  // If only ingredients exist, show ingredients directly
-                  if (hasIngredients) {
-                    return (
-                      <div className="mb-6">
-                        <div className="flex items-center gap-2 mb-3">
-                          <ChefHat className="h-5 w-5 text-[#2a0a4a]" />
-                          <h2 className="text-xl font-semibold text-[#1b0736]">{labels.ingredients}</h2>
-                        </div>
-                        <div className="rounded-xl bg-[#f7f3ff] p-4">
-                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {selectedRecipe.ingredients.map((ingredient, index) => (
-                              <li key={index} className="flex items-center gap-2 text-[#4a3f63]">
-                                <span className="h-1.5 w-1.5 rounded-full bg-[#ff1dbb]"></span>
-                                <span className="capitalize">{ingredient.name}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    );
-                  }
-
-                  return null;
-                })()}
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Nutritional Info */}
                 <div className="border-t border-gray-200 pt-6 mt-6">
@@ -704,7 +626,9 @@ export default function MenuDetail() {
                         key={allergen.id}
                         className="rounded-xl border-2 border-[#f7c8eb] bg-gradient-to-br from-[#fff0fa] to-[#f4f0ff] p-4 text-center"
                       >
-                        <div className="mb-2 text-3xl">{getAllergenMarker(allergen.name)}</div>
+                        <span className="mx-auto mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#e9dcfb] bg-white text-[#5f537d]">
+                          <AllergenIcon allergenName={allergen.name} className="h-4 w-4" />
+                        </span>
                         <h3 className="text-sm font-semibold capitalize text-[#7d165f]">{allergen.name}</h3>
                       </div>
                     ))
@@ -868,7 +792,7 @@ export default function MenuDetail() {
               <button
                 onClick={() => {
                   if (!venueCode) return;
-                  navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}`);
+                  navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}${activeTemplate}`);
                 }}
                 className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
               >
@@ -911,25 +835,4 @@ export default function MenuDetail() {
       )}
     </div>
   );
-}
-
-function getAllergenMarker(allergenName: string): string {
-  const normalized = allergenName.toLowerCase().trim();
-  
-  if (normalized.includes("glutine")) return "🌾";
-  if (normalized.includes("lattici") || normalized.includes("latte")) return "🥛";
-  if (normalized.includes("uova") || normalized.includes("uovo")) return "🥚";
-  if (normalized.includes("pesce")) return "🐟";
-  if (normalized.includes("crostacei")) return "🦞";
-  if (normalized.includes("molluschi")) return "🐙";
-  if (normalized.includes("arachidi")) return "🥜";
-  if (normalized.includes("frutta a guscio") || normalized.includes("noci")) return "🌰";
-  if (normalized.includes("sesamo")) return "🌱";
-  if (normalized.includes("soia")) return "🫘";
-  if (normalized.includes("sedano")) return "🌿";
-  if (normalized.includes("senape")) return "🟡";
-  if (normalized.includes("lupini")) return "🫛";
-  if (normalized.includes("solfiti") || normalized.includes("anidride solforosa")) return "🍷";
-  
-  return "⚠️";
 }

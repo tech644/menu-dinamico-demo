@@ -72,7 +72,9 @@ export default function Home() {
       subtitle="Scegli il percorso perfetto per il momento: pranzo, cena o degustazione."
       ctaLabel="Apri Menu"
       menus={menus}
-      onOpenMenu={(menuId) => navigate(`/${venueCode}/menu/${menuId}`)}
+      onOpenMenu={(menuId, templateId) =>
+        navigate(`/${venueCode}/menu/${menuId}?template=${encodeURIComponent(templateId)}`)
+      }
     />
   );
 }
