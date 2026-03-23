@@ -9,6 +9,11 @@ export default function Root() {
   const location = useLocation();
 
   useEffect(() => {
+    const isDemoRoute = location.pathname.includes("/menu_demo");
+    if (!isDemoRoute) {
+      return;
+    }
+
     const params = new URLSearchParams(location.search);
     const queryTemplate = params.get("template");
     const storedTemplate =
@@ -26,7 +31,7 @@ export default function Root() {
 
     document.documentElement.setAttribute("data-menu-template", activeTemplate);
     document.body.setAttribute("data-menu-template", activeTemplate);
-  }, [location.search]);
+  }, [location.pathname, location.search]);
 
   return (
     <div className="flex min-h-screen flex-col">

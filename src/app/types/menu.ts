@@ -1,3 +1,5 @@
+import { MenuTemplateId } from "../theme/menuTemplates";
+
 // Type definitions for Menu structure
 export interface MenuItem {
   itemId: string;
@@ -22,6 +24,15 @@ export interface Menu {
   menuId: string;
   localId: string;
   name: string;
+  isPublic: boolean;
+  menuTemplateId: MenuTemplateId;
+  publicLogoUrl?: string | null;
+  hasSchedule: boolean;
+  activeFromDateIso: string;
+  activeToDateIso: string;
+  activeFromTime24h: string;
+  activeToTime24h: string;
+  activeWeekdays: number[];
   type: string;
   sections: MenuSection[];
   price: number | null;

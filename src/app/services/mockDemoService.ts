@@ -211,6 +211,15 @@ function buildDemoMenu({
     menuId,
     name,
     type,
+    isPublic: true,
+    menuTemplateId: "amethyst",
+    publicLogoUrl: null,
+    hasSchedule: false,
+    activeFromDateIso: "",
+    activeToDateIso: "",
+    activeFromTime24h: "",
+    activeToTime24h: "",
+    activeWeekdays: [],
     sections,
   };
 }

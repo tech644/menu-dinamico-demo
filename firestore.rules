@@ -4,7 +4,7 @@ service cloud.firestore {
     // Public read for menu browsing app.
     // Writes blocked from client app.
     match /menus/{menuId} {
-      allow read: if true;
+      allow read: if resource.data.isPublic == true;
       allow write: if false;
     }
 

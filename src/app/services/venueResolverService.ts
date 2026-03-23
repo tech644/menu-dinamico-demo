@@ -7,6 +7,7 @@ export interface VenueContext {
   businessId: string;
   localId: string;
   venueCode: string;
+  timeZone?: string;
 }
 
 const VENUE_CODE_REGEX = /^[A-Z0-9]{6}-[A-Z0-9]{6}$/;
@@ -70,6 +71,8 @@ export async function resolveVenueCode(rawVenueCode: string): Promise<VenueConte
           businessId?: string;
           localId?: string;
           active?: boolean;
+          timeZone?: string;
+          timezone?: string;
         };
 
         if (data.active === false) {
@@ -78,7 +81,12 @@ export async function resolveVenueCode(rawVenueCode: string): Promise<VenueConte
 
         if (data.businessId && data.localId) {
           debug("route_keys direct resolved", { businessId: data.businessId, localId: data.localId });
-          return { businessId: data.businessId, localId: data.localId, venueCode };
+          return {
+            businessId: data.businessId,
+            localId: data.localId,
+            venueCode,
+            timeZone: data.timeZone || data.timezone,
+          };
         }
       }
       debug("route_keys direct doc not found", { id: venueCode });
@@ -94,6 +102,8 @@ export async function resolveVenueCode(rawVenueCode: string): Promise<VenueConte
           businessId?: string;
           localId?: string;
           active?: boolean;
+          timeZone?: string;
+          timezone?: string;
         };
 
         if (data.active === false) {
@@ -102,7 +112,12 @@ export async function resolveVenueCode(rawVenueCode: string): Promise<VenueConte
 
         if (data.businessId && data.localId) {
           debug("route_keys by code resolved", { businessId: data.businessId, localId: data.localId });
-          return { businessId: data.businessId, localId: data.localId, venueCode };
+          return {
+            businessId: data.businessId,
+            localId: data.localId,
+            venueCode,
+            timeZone: data.timeZone || data.timezone,
+          };
         }
       }
       debug("route_keys by code not found", { code: venueCode });
@@ -117,6 +132,8 @@ export async function resolveVenueCode(rawVenueCode: string): Promise<VenueConte
           businessId?: string;
           localId?: string;
           active?: boolean;
+          timeZone?: string;
+          timezone?: string;
         };
 
         if (!data.localId) {
@@ -142,7 +159,12 @@ export async function resolveVenueCode(rawVenueCode: string): Promise<VenueConte
         });
         if (computed === venueCode) {
           debug("menus fallback resolved", { businessId, localId: data.localId });
-          return { businessId, localId: data.localId, venueCode };
+          return {
+            businessId,
+            localId: data.localId,
+            venueCode,
+            timeZone: data.timeZone || data.timezone,
+          };
         }
       }
       debug("menus fallback unresolved");

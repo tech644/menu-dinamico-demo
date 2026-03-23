@@ -10,10 +10,18 @@ interface MenuChooserProps {
   subtitle: string;
   ctaLabel: string;
   menus: Menu[];
-  onOpenMenu: (menuId: string, templateId: MenuTemplateId) => void;
+  showTemplateSelector?: boolean;
+  onOpenMenu: (menuId: string, templateId?: MenuTemplateId) => void;
 }
 
-export function MenuChooser({ title, subtitle, ctaLabel, menus, onOpenMenu }: MenuChooserProps) {
+export function MenuChooser({
+  title,
+  subtitle,
+  ctaLabel,
+  menus,
+  showTemplateSelector = false,
+  onOpenMenu,
+}: MenuChooserProps) {
   const initialTemplate = useMemo<MenuTemplateId>(() => {
     if (typeof window === "undefined") {
       return "amethyst";
@@ -34,7 +42,7 @@ export function MenuChooser({ title, subtitle, ctaLabel, menus, onOpenMenu }: Me
   };
 
   const handleOpenMenu = (menuId: string) => {
-    onOpenMenu(menuId, selectedTemplate);
+    onOpenMenu(menuId, showTemplateSelector ? selectedTemplate : undefined);
   };
 
   return (
@@ -53,31 +61,33 @@ export function MenuChooser({ title, subtitle, ctaLabel, menus, onOpenMenu }: Me
           <p className="mx-auto mt-2 max-w-2xl text-base text-[#5f537d] md:mt-3 md:text-lg">{subtitle}</p>
         </div>
 
-        <div className="mb-6 rounded-3xl border border-white/60 bg-white/70 p-3 backdrop-blur-sm md:mb-8 md:p-4">
-          <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-[#5f537d] md:mb-4">
-            Scegli il tuo stile
-          </p>
-          <div className="grid gap-2 md:grid-cols-3 md:gap-3">
-            {MENU_TEMPLATES.map((template) => {
-              const isActive = selectedTemplate === template.id;
-              return (
-                <button
-                  key={template.id}
-                  type="button"
-                  onClick={() => applyTemplate(template.id)}
-                  className={`ord-template-tile border px-3 py-2 text-left transition-all ${
-                    isActive
-                      ? "border-[#2a0a4a] bg-[#f4efff] shadow-[0_8px_24px_rgba(42,10,74,0.16)]"
-                      : "border-[#e7ddf6] bg-white hover:border-[#d5c5ef]"
-                  }`}
-                >
-                  <span className="block text-sm font-bold text-[#1b0736]">{template.name}</span>
-                  <span className="block text-xs text-[#6a5c86]">{template.description}</span>
-                </button>
-              );
-            })}
+        {showTemplateSelector && (
+          <div className="mb-6 rounded-3xl border border-white/60 bg-white/70 p-3 backdrop-blur-sm md:mb-8 md:p-4">
+            <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-[#5f537d] md:mb-4">
+              Scegli il tuo stile
+            </p>
+            <div className="grid gap-2 md:grid-cols-3 md:gap-3">
+              {MENU_TEMPLATES.map((template) => {
+                const isActive = selectedTemplate === template.id;
+                return (
+                  <button
+                    key={template.id}
+                    type="button"
+                    onClick={() => applyTemplate(template.id)}
+                    className={`ord-template-tile border px-3 py-2 text-left transition-all ${
+                      isActive
+                        ? "border-[#2a0a4a] bg-[#f4efff] shadow-[0_8px_24px_rgba(42,10,74,0.16)]"
+                        : "border-[#e7ddf6] bg-white hover:border-[#d5c5ef]"
+                    }`}
+                  >
+                    <span className="block text-sm font-bold text-[#1b0736]">{template.name}</span>
+                    <span className="block text-xs text-[#6a5c86]">{template.description}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="grid gap-4 md:grid-cols-2 md:gap-6">
           {menus.map((menu) => {
@@ -98,9 +108,21 @@ export function MenuChooser({ title, subtitle, ctaLabel, menus, onOpenMenu }: Me
               >
                 <div className="mb-4 flex items-start justify-between gap-3 md:mb-5">
                   <h2 className="text-2xl font-black leading-tight text-[#1b0736] md:text-3xl">{menu.name}</h2>
-                  <div className="rounded-2xl bg-[#2a0a4a] p-3 text-white">
-                    <UtensilsCrossed className="h-5 w-5" />
-                  </div>
+                  {menu.publicLogoUrl ? (
+                    <div className="h-11 w-11 overflow-hidden rounded-2xl ring-1 ring-[#e5daf5]">
+                      <img
+                        src={menu.publicLogoUrl}
+                        alt=""
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ) : (
+                    <div className="rounded-2xl bg-[#2a0a4a] p-3 text-white">
+                      <UtensilsCrossed className="h-5 w-5" />
+                    </div>
+                  )}
                 </div>
 
                 <div className="mb-5 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-[#4f436b] md:mb-6">

@@ -40,6 +40,7 @@ import {
   SupportedLanguage,
   translateMenuAndRecipes,
 } from "../services/deeplMenuTranslationService";
+import { isMenuAvailableNow } from "../utils/menuAvailability";
 import {
   Select,
   SelectContent,
@@ -114,6 +115,7 @@ export default function MenuDetail() {
   const [menu, setMenu] = useState<Menu | null>(null);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [notFound, setNotFound] = useState(false);
+  const [unavailableNow, setUnavailableNow] = useState(false);
   const [loading, setLoading] = useState(true);
   const [language, setLanguage] = useState<SupportedLanguage>("it");
   const [translating, setTranslating] = useState(false);
@@ -134,14 +136,18 @@ export default function MenuDetail() {
 
   useEffect(() => {
     async function loadMenuData() {
+      setLoading(true);
+      setNotFound(false);
       if (!menuId || !venueCode) {
         setNotFound(true);
         setLoading(false);
         return;
       }
+      setUnavailableNow(false);
       
       try {
         let menuData: Menu | null = null;
+        let venueTimeZone = "Europe/Rome";
 
         if (isDemoRoute) {
           menuData = await getDemoMenuById(menuId);
@@ -157,6 +163,7 @@ export default function MenuDetail() {
             setNotFound(true);
             return;
           }
+          venueTimeZone = venue.timeZone || "Europe/Rome";
 
           menuData = await getMenuByIdForVenue(menuId, venue);
           if (import.meta.env.DEV) {
@@ -165,6 +172,17 @@ export default function MenuDetail() {
         }
 
         if (!menuData) {
+          setNotFound(true);
+          return;
+        }
+
+        if (!isDemoRoute && menuData.isPublic !== true) {
+          setNotFound(true);
+          return;
+        }
+
+        if (!isDemoRoute && !isMenuAvailableNow(menuData, { timeZone: venueTimeZone })) {
+          setUnavailableNow(true);
           setNotFound(true);
           return;
         }
@@ -196,6 +214,15 @@ export default function MenuDetail() {
 
     loadMenuData();
   }, [isDemoRoute, menuId, venueCode]);
+
+  useEffect(() => {
+    if (!menu || isDemoRoute) {
+      return;
+    }
+
+    document.documentElement.setAttribute("data-menu-template", menu.menuTemplateId);
+    document.body.setAttribute("data-menu-template", menu.menuTemplateId);
+  }, [isDemoRoute, menu]);
 
   useEffect(() => {
     async function runTranslation() {
@@ -347,7 +374,7 @@ export default function MenuDetail() {
     }
     return effectiveRecipes.filter((recipe) => recipe.name.toLowerCase().includes(normalizedSearchQuery));
   }, [effectiveRecipes, normalizedSearchQuery]);
-  const activeTemplate = useMemo(() => {
+  const activeDemoTemplate = useMemo(() => {
     const value = new URLSearchParams(location.search).get("template");
     return value ? `?template=${encodeURIComponent(value)}` : "";
   }, [location.search]);
@@ -401,7 +428,7 @@ export default function MenuDetail() {
   }
 
   if (notFound) {
-    return <NotFound message="Menu non trovato per questo locale." />;
+    return <NotFound message={unavailableNow ? "Menu non disponibile in questo momento." : "Menu non trovato per questo locale."} />;
   }
 
   if (!menu || !effectiveMenu) {
@@ -413,7 +440,21 @@ export default function MenuDetail() {
       <Header
         showBack={false}
         title={effectiveMenu.name}
-        leftContent={<LocalDemoLogo showName={false} size="sm" className="mr-1" />}
+        leftContent={
+          effectiveMenu.publicLogoUrl ? (
+            <span className="mr-1 inline-flex h-9 w-9 overflow-hidden rounded-full bg-white ring-1 ring-[#e5daf5]">
+              <img
+                src={effectiveMenu.publicLogoUrl}
+                alt=""
+                className="h-full w-full object-cover"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+            </span>
+          ) : (
+            <LocalDemoLogo showName={false} size="sm" className="mr-1" />
+          )
+        }
         rightContent={
           <Select
             value={language}
@@ -452,7 +493,7 @@ export default function MenuDetail() {
         leadingActionLabel={labels.menu}
         onLeadingActionClick={() => {
           if (!venueCode) return;
-          navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}${activeTemplate}`);
+          navigate(`/${venueCode}/${isDemoRoute ? `menu_demo${activeDemoTemplate}` : "menu"}`);
         }}
         onCategoryChange={(name) => {
           const section = effectiveMenu.sections.find(s => s.name === name);
@@ -800,7 +841,7 @@ export default function MenuDetail() {
               <button
                 onClick={() => {
                   if (!venueCode) return;
-                  navigate(`/${venueCode}/${isDemoRoute ? "menu_demo" : "menu"}${activeTemplate}`);
+                  navigate(`/${venueCode}/${isDemoRoute ? `menu_demo${activeDemoTemplate}` : "menu"}`);
                 }}
                 className="flex min-w-0 flex-col items-center gap-1 px-1 text-[#2a0a4a]"
               >
