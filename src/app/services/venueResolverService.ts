@@ -29,7 +29,7 @@ function normalizeVenueCode(value: string): string {
 }
 
 // ===============================
-// 🔐 NEW SYSTEM (BASE64 ENCODED)
+// NEW SYSTEM (BASE64 ENCODED)
 // ===============================
 function decodeVenueCode(code: string): {
   businessId: string;
@@ -69,7 +69,7 @@ function decodeVenueCode(code: string): {
 }
 
 // ===============================
-// 🆕 BUILD VENUE CODE (NEW SYSTEM)
+// BUILD VENUE CODE (NEW SYSTEM)
 // ===============================
 export function buildVenueCode(
   businessId: string,
@@ -85,7 +85,7 @@ export function buildVenueCode(
 }
 
 // ===============================
-// 🔙 LEGACY SUPPORT (HASH)
+// LEGACY SUPPORT (HASH)
 // ===============================
 const VENUE_CODE_REGEX = /^[A-Z0-9]{6}-[A-Z0-9]{6}$/;
 
@@ -133,7 +133,7 @@ const mockVenueCode = buildVenueCodeLegacy(
 );
 
 // ===============================
-// 🚀 MAIN RESOLVER
+// MAIN RESOLVER
 // ===============================
 export async function resolveVenueCode(
   rawVenueCode: string
@@ -146,12 +146,12 @@ export async function resolveVenueCode(
   });
 
   // ===============================
-  // 1️⃣ NEW SYSTEM (FAST PATH - base64)
+  // NEW SYSTEM (FAST PATH - base64)
   // ===============================
   const decoded = decodeVenueCode(venueCode);
 
   if (decoded) {
-    debug("✅ decoded (new system)", decoded);
+    debug("decoded (new system)", decoded);
 
     return {
       businessId: decoded.businessId,
@@ -161,14 +161,14 @@ export async function resolveVenueCode(
   }
 
   // ===============================
-  // 2️⃣ 🔥 MOCK FALLBACK (CRITICO per dev)
+  // MOCK FALLBACK (CRITICO per dev)
   // ===============================
   try {
     const decodedRaw = atob(venueCode);
     const [businessId, localId] = decodedRaw.split("|");
 
     if (businessId && localId) {
-      debug("✅ decoded (mock fallback)", {
+      debug("decoded (mock fallback)", {
         businessId,
         localId,
       });
@@ -184,7 +184,7 @@ export async function resolveVenueCode(
   }
 
   // ===============================
-  // 3️⃣ LEGACY SUPPORT (vecchio hash)
+  // LEGACY SUPPORT (vecchio hash)
   // ===============================
   if (VENUE_CODE_REGEX.test(venueCode)) {
     debug("legacy code detected");
@@ -203,7 +203,7 @@ export async function resolveVenueCode(
   }
 
   // ===============================
-  // ❌ FAIL
+  // FAIL
   // ===============================
   debug("resolve failed");
 
