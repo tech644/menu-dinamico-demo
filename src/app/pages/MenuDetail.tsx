@@ -7,7 +7,7 @@ import { Header } from "../components/Header";
 import { CategoryTabs } from "../components/CategoryTabs";
 import { RecipeCard } from "../components/RecipeCard";
 import { LoadingSpinner } from "../components/LoadingSpinner";
-import { LocalDemoLogo } from "../components/LocalDemoLogo";
+//import { LocalDemoLogo } from "../components/LocalDemoLogo";
 import { AllergenIcon } from "../components/AllergenIcon";
 // import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import {
@@ -471,39 +471,40 @@ export default function MenuDetail() {
               />
             </span>
           ) : (
-            <LocalDemoLogo showName={false} size="sm" className="mr-1" />
+            ''
+            //<LocalDemoLogo showName={false} size="sm" className="mr-1" />
           )
         }
-        rightContent={
-          <Select
-            value={language}
-            onValueChange={(value) => setLanguage(value as SupportedLanguage)}
-          >
-            <SelectTrigger className="h-auto w-auto border-0 bg-transparent px-0 py-0 text-3xl leading-none shadow-none ring-0 [&>svg]:hidden">
-              <span className="inline-flex items-center gap-1.5">
-                <span>{LANGUAGE_OPTIONS.find((option) => option.value === language)?.marker}</span>
-                {translating && (
-                  <Loader2
-                    className="h-4 w-4 animate-spin text-[#6a5c86]"
-                    aria-label={labels.translating}
-                  />
-                )}
-              </span>
-            </SelectTrigger>
-            <SelectContent className="rounded-3xl border-[#e3d9f1] bg-white p-0">
-              {LANGUAGE_OPTIONS.map((option) => (
-                <SelectItem
-                  key={option.value}
-                  value={option.value}
-                  className="h-12 border-b border-[#ece4f6] px-4 text-lg text-[#241833] last:border-b-0"
-                >
-                  <span>{option.marker}</span>
-                  <span>{option.label}</span>
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        }
+        // rightContent={
+        //   <Select
+        //     value={language}
+        //     onValueChange={(value) => setLanguage(value as SupportedLanguage)}
+        //   >
+        //     <SelectTrigger className="h-auto w-auto border-0 bg-transparent px-0 py-0 text-3xl leading-none shadow-none ring-0 [&>svg]:hidden">
+        //       <span className="inline-flex items-center gap-1.5">
+        //         <span>{LANGUAGE_OPTIONS.find((option) => option.value === language)?.marker}</span>
+        //         {translating && (
+        //           <Loader2
+        //             className="h-4 w-4 animate-spin text-[#6a5c86]"
+        //             aria-label={labels.translating}
+        //           />
+        //         )}
+        //       </span>
+        //     </SelectTrigger>
+        //     <SelectContent className="rounded-3xl border-[#e3d9f1] bg-white p-0">
+        //       {LANGUAGE_OPTIONS.map((option) => (
+        //         <SelectItem
+        //           key={option.value}
+        //           value={option.value}
+        //           className="h-12 border-b border-[#ece4f6] px-4 text-lg text-[#241833] last:border-b-0"
+        //         >
+        //           <span>{option.marker}</span>
+        //           <span>{option.label}</span>
+        //         </SelectItem>
+        //       ))}
+        //     </SelectContent>
+        //   </Select>
+        // }
       />
       
       <CategoryTabs

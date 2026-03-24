@@ -1,7 +1,7 @@
 import { UtensilsCrossed } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Menu } from "../services/menuService";
-import { LocalDemoLogo } from "./LocalDemoLogo";
+//import { LocalDemoLogo } from "./LocalDemoLogo";
 import { isMenuTemplateId, MENU_TEMPLATES, MenuTemplateId } from "../theme/menuTemplates";
 
 // Shared menu picker used by both production and demo listing pages.
@@ -52,9 +52,9 @@ export function MenuChooser({
 
       <div className="relative mx-auto max-w-5xl">
         <div className="mb-6 text-center md:mb-10">
-          <div className="inline-flex rounded-full border border-[#d9ccee] bg-white/70 px-3 py-1.5">
+          {/* <div className="inline-flex rounded-full border border-[#d9ccee] bg-white/70 px-3 py-1.5">
             <LocalDemoLogo size="sm" />
-          </div>
+          </div> */}
           <h1 className="mt-3 text-3xl font-black tracking-tight text-[#1b0736] md:mt-4 md:text-6xl">
             {title}
           </h1>

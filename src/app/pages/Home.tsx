@@ -95,7 +95,7 @@ export default function Home() {
   return (
     <MenuChooser
       title="Scopri I Nostri Menu"
-      subtitle="Scegli il percorso perfetto per il momento: pranzo, cena o degustazione."
+      subtitle="Di seguito i nostri menu del momento"
       ctaLabel="Apri Menu"
       menus={menus}
       onOpenMenu={(menuId) => navigate(`/${venueCode}/menu/${menuId}`)}
