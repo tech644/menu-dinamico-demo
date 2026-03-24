@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getRecipeById, Recipe } from "../services/recipeService";
 import { getAllergensInfo } from "../services/allergenService";
+import { resolveVenueCode } from "../services/venueResolverService";
 import { Header } from "../components/Header";
 import { LocalDemoLogo } from "../components/LocalDemoLogo";
 import { AllergenIcon } from "../components/AllergenIcon";
@@ -12,7 +13,7 @@ import { AlertCircle } from "lucide-react";
 
 // Recipe detail page with hero image, allergen info, and pricing.
 export default function RecipeDetail() {
-  const { recipeId } = useParams<{ recipeId: string }>();
+  const { venueCode, recipeId } = useParams<{ venueCode: string; recipeId: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -21,7 +22,12 @@ export default function RecipeDetail() {
       if (!recipeId) return;
       
       try {
-        const data = await getRecipeById(recipeId);
+        let businessId: string | undefined;
+        if (venueCode) {
+          const venue = await resolveVenueCode(venueCode);
+          businessId = venue?.businessId;
+        }
+        const data = await getRecipeById(recipeId, businessId);
         setRecipe(data);
       } catch (error) {
         console.error("Error loading recipe:", error);
@@ -31,7 +37,7 @@ export default function RecipeDetail() {
     }
 
     loadRecipe();
-  }, [recipeId]);
+  }, [recipeId, venueCode]);
 
   if (loading) {
     return <LoadingSpinner />;

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { useLocation, useMatch, useNavigate, useParams } from "react-router";
 import { getMenuByIdForVenue, Menu, MenuSection } from "../services/menuService";
-import { getRecipesByIds, Recipe } from "../services/recipeService";
+import { getBeveragesByIds, getRecipesByIds, Recipe } from "../services/recipeService";
 import { getAllergensInfo } from "../services/allergenService";
 import { Header } from "../components/Header";
 import { CategoryTabs } from "../components/CategoryTabs";
@@ -148,6 +148,7 @@ export default function MenuDetail() {
       try {
         let menuData: Menu | null = null;
         let venueTimeZone = "Europe/Rome";
+        let venueBusinessId = "";
 
         if (isDemoRoute) {
           menuData = await getDemoMenuById(menuId);
@@ -164,6 +165,7 @@ export default function MenuDetail() {
             return;
           }
           venueTimeZone = venue.timeZone || "Europe/Rome";
+          venueBusinessId = venue.businessId;
 
           menuData = await getMenuByIdForVenue(menuId, venue);
           if (import.meta.env.DEV) {
@@ -189,16 +191,33 @@ export default function MenuDetail() {
         
         setMenu(menuData);
         
-        // Build a flat list of recipe ids referenced by menu items.
-        const recipeIds = menuData.sections.flatMap(section =>
-          section.items.map(item => item.refId)
-        );
+        // Build flat id lists from menu items, splitting recipes and beverages.
+        const recipeIds = new Set<string>();
+        const beverageIds = new Set<string>();
+        menuData.sections.forEach((section) => {
+          section.items.forEach((item) => {
+            const normalizedType = (item.type || "").toLowerCase();
+            const isBeverageType =
+              normalizedType.includes("beverage") ||
+              normalizedType.includes("drink") ||
+              normalizedType.includes("bar");
+            if (isBeverageType) {
+              beverageIds.add(item.refId);
+            } else {
+              recipeIds.add(item.refId);
+            }
+          });
+        });
         
         // Fetch recipes from the appropriate data source for the current route.
         const recipesData = isDemoRoute
-          ? await getDemoRecipesByIds(recipeIds)
-          : await getRecipesByIds(recipeIds);
-        setRecipes(recipesData);
+          ? await getDemoRecipesByIds(Array.from(recipeIds))
+          : await getRecipesByIds(Array.from(recipeIds), venueBusinessId);
+        const beveragesData = isDemoRoute
+          ? []
+          : await getBeveragesByIds(Array.from(beverageIds), venueBusinessId);
+        const merged = [...recipesData, ...beveragesData];
+        setRecipes(merged);
         
         // Initialize the active section to keep tabs in sync from first render.
         if (menuData.sections.length > 0) {

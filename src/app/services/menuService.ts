@@ -99,40 +99,39 @@ export async function getAllMenus(): Promise<Menu[]> {
 export async function getMenusByVenue(venue: VenueContext): Promise<Menu[]> {
   if (!isFirebaseConfigured) {
     await new Promise(resolve => setTimeout(resolve, 100));
+
     const fallbackMenu = normalizeMenu(
       menuData.menu as Partial<Menu>,
       (menuData.menu as Partial<Menu>)?.menuId || "fallback_menu",
     );
+
     if (fallbackMenu.localId === venue.localId && fallbackMenu.isPublic) {
       return [fallbackMenu];
     }
+
     return [];
   }
 
   try {
     const db = getFirestoreDb();
-    const menusRef = collection(db, "menus");
-    // Public app should only receive menus explicitly marked as public.
-    // If this dual-filter query needs ordering later, Firestore might require a composite index.
-    const byLocalAndPublicQuery = query(
-      menusRef,
-      where("localId", "==", venue.localId),
-      where("isPublic", "==", true),
-    );
-    const snapshot = await getDocs(byLocalAndPublicQuery);
 
-    return snapshot.docs
-      .map((menuDoc) => normalizeMenu(menuDoc.data() as Partial<Menu>, menuDoc.id))
-      .filter((menu) => menu.isPublic && (!menu.businessId || menu.businessId === venue.businessId));
-  } catch (error) {
-    console.error("Error loading venue menus from Firestore, using mock data:", error);
-    const fallbackMenu = normalizeMenu(
-      menuData.menu as Partial<Menu>,
-      (menuData.menu as Partial<Menu>)?.menuId || "fallback_menu",
+    // 🚀 query DIRETTA (no business read)
+    const menusRef = collection(db, "business", venue.businessId, "fbMenus");
+
+    const q = query(
+      menusRef,
+      where("isPublic", "==", true),
+      where("localId", "==", venue.localId) // 🔥 filtro diretto
     );
-    if (fallbackMenu.localId === venue.localId && fallbackMenu.isPublic) {
-      return [fallbackMenu];
-    }
+
+    const snapshot = await getDocs(q);
+
+    return snapshot.docs.map((menuDoc) =>
+      normalizeMenu(menuDoc.data() as Partial<Menu>, menuDoc.id)
+    );
+
+  } catch (error) {
+    console.error("Error loading venue menus:", error);
     return [];
   }
 }

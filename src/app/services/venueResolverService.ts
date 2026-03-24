@@ -1,8 +1,8 @@
-import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/firestore";
 import { menuData } from "../data/menuData";
-import { getFirestoreDb, isFirebaseConfigured } from "./firebase";
 
-// Resolves route venue codes to business/local identifiers.
+// ===============================
+// TYPES
+// ===============================
 export interface VenueContext {
   businessId: string;
   localId: string;
@@ -10,18 +10,84 @@ export interface VenueContext {
   timeZone?: string;
 }
 
-const VENUE_CODE_REGEX = /^[A-Z0-9]{6}-[A-Z0-9]{6}$/;
-const MOCK_BUSINESS_ID = "default-business";
-const MOCK_LOCAL_ID = menuData.menu.localId;
+// ===============================
+// CONFIG
+// ===============================
+const SECRET = "gizmo";
+
 const debug = (...args: unknown[]) => {
   if (import.meta.env.DEV) {
     console.log("[venueResolver]", ...args);
   }
 };
 
+// ===============================
+// NORMALIZE
+// ===============================
 function normalizeVenueCode(value: string): string {
-  return value.toUpperCase().replace(/[^A-Z0-9-]/g, "");
+  return value.trim();
 }
+
+// ===============================
+// 🔐 NEW SYSTEM (BASE64 ENCODED)
+// ===============================
+function decodeVenueCode(code: string): {
+  businessId: string;
+  localId: string;
+} | null {
+  try {
+    // supporta base64 url-safe (Flutter web friendly)
+    const normalized = code.replace(/-/g, "+").replace(/_/g, "/");
+
+    // fix padding
+    const padded = normalized + "=".repeat((4 - (normalized.length % 4)) % 4);
+
+    const decoded = atob(padded);
+
+    const parts = decoded.split("|");
+
+    // supporta sia 2 che 3 parti (mock + prod)
+    const businessId = parts[0];
+    const localId = parts[1];
+    const secret = parts[2];
+
+    if (!businessId || !localId) {
+      return null;
+    }
+
+    // 🔐 se c'è secret → validalo
+    if (secret !== undefined && secret !== SECRET) {
+      debug("invalid secret");
+      return null;
+    }
+
+    return { businessId, localId };
+  } catch (e) {
+    debug("decode error", e);
+    return null;
+  }
+}
+
+// ===============================
+// 🆕 BUILD VENUE CODE (NEW SYSTEM)
+// ===============================
+export function buildVenueCode(
+  businessId: string,
+  localId: string
+): string {
+  const raw = `${businessId}|${localId}|${SECRET}`;
+
+  // base64 url-safe
+  return btoa(raw)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+}
+
+// ===============================
+// 🔙 LEGACY SUPPORT (HASH)
+// ===============================
+const VENUE_CODE_REGEX = /^[A-Z0-9]{6}-[A-Z0-9]{6}$/;
 
 function shortHash6(value: string, salt: string): string {
   const input = `${salt}:${value}`;
@@ -32,10 +98,17 @@ function shortHash6(value: string, salt: string): string {
     hash = Math.imul(hash, 16777619);
   }
 
-  return (hash >>> 0).toString(36).toUpperCase().padStart(6, "0").slice(-6);
+  return (hash >>> 0)
+    .toString(36)
+    .toUpperCase()
+    .padStart(6, "0")
+    .slice(-6);
 }
 
-export function buildVenueCode(businessId: string, localId: string): string {
+function buildVenueCodeLegacy(
+  businessId: string,
+  localId: string
+): string {
   return `${shortHash6(businessId, "BIZ")}-${shortHash6(localId, "LOC")}`;
 }
 
@@ -48,140 +121,91 @@ function deriveBusinessId(localId: string, fallback?: string): string {
   return match?.[1] || "";
 }
 
-const mockVenueCode = buildVenueCode(MOCK_BUSINESS_ID, MOCK_LOCAL_ID);
+// ===============================
+// MOCK (DEV ONLY)
+// ===============================
+const MOCK_BUSINESS_ID = "default-business";
+const MOCK_LOCAL_ID = menuData.menu.localId;
 
-export async function resolveVenueCode(rawVenueCode: string): Promise<VenueContext | null> {
+const mockVenueCode = buildVenueCodeLegacy(
+  MOCK_BUSINESS_ID,
+  MOCK_LOCAL_ID
+);
+
+// ===============================
+// 🚀 MAIN RESOLVER
+// ===============================
+export async function resolveVenueCode(
+  rawVenueCode: string
+): Promise<VenueContext | null> {
   const venueCode = normalizeVenueCode(rawVenueCode);
-  debug("resolve start", { rawVenueCode, normalized: venueCode, isFirebaseConfigured });
 
-  if (!VENUE_CODE_REGEX.test(venueCode)) {
-    debug("invalid venueCode format");
-    return null;
-  }
+  debug("resolve start", {
+    rawVenueCode,
+    normalized: venueCode,
+  });
 
-  if (isFirebaseConfigured) {
-    try {
-      const db = getFirestoreDb();
+  // ===============================
+  // 1️⃣ NEW SYSTEM (FAST PATH - base64)
+  // ===============================
+  const decoded = decodeVenueCode(venueCode);
 
-      // Preferred shape: route_keys/{VENUE_CODE} => { businessId, localId, active }
-      const routeDoc = await getDoc(doc(db, "route_keys", venueCode));
-      if (routeDoc.exists()) {
-        debug("route_keys direct doc found", { id: venueCode, data: routeDoc.data() });
-        const data = routeDoc.data() as {
-          businessId?: string;
-          localId?: string;
-          active?: boolean;
-          timeZone?: string;
-          timezone?: string;
-        };
+  if (decoded) {
+    debug("✅ decoded (new system)", decoded);
 
-        if (data.active === false) {
-          return null;
-        }
-
-        if (data.businessId && data.localId) {
-          debug("route_keys direct resolved", { businessId: data.businessId, localId: data.localId });
-          return {
-            businessId: data.businessId,
-            localId: data.localId,
-            venueCode,
-            timeZone: data.timeZone || data.timezone,
-          };
-        }
-      }
-      debug("route_keys direct doc not found", { id: venueCode });
-
-      // Fallback shape: route_keys documents with `code` field
-      const routesRef = collection(db, "route_keys");
-      const byCodeQuery = query(routesRef, where("code", "==", venueCode), limit(1));
-      const snapshot = await getDocs(byCodeQuery);
-
-      if (!snapshot.empty) {
-        debug("route_keys by code found", { count: snapshot.size, data: snapshot.docs[0].data() });
-        const data = snapshot.docs[0].data() as {
-          businessId?: string;
-          localId?: string;
-          active?: boolean;
-          timeZone?: string;
-          timezone?: string;
-        };
-
-        if (data.active === false) {
-          return null;
-        }
-
-        if (data.businessId && data.localId) {
-          debug("route_keys by code resolved", { businessId: data.businessId, localId: data.localId });
-          return {
-            businessId: data.businessId,
-            localId: data.localId,
-            venueCode,
-            timeZone: data.timeZone || data.timezone,
-          };
-        }
-      }
-      debug("route_keys by code not found", { code: venueCode });
-
-      // Final fallback: infer from menus collection when route_keys is not populated yet.
-      const menusRef = collection(db, "menus");
-      const menusSnapshot = await getDocs(query(menusRef, limit(200)));
-      debug("menus fallback scan", { count: menusSnapshot.size });
-
-      for (const menuDoc of menusSnapshot.docs) {
-        const data = menuDoc.data() as {
-          businessId?: string;
-          localId?: string;
-          active?: boolean;
-          timeZone?: string;
-          timezone?: string;
-        };
-
-        if (!data.localId) {
-          continue;
-        }
-
-        const businessId = deriveBusinessId(data.localId, data.businessId);
-        if (!businessId) {
-          continue;
-        }
-
-        if (data.active === false) {
-          continue;
-        }
-
-        const computed = buildVenueCode(businessId, data.localId);
-        debug("menus fallback candidate", {
-          menuDocId: menuDoc.id,
-          businessId,
-          localId: data.localId,
-          computed,
-          expected: venueCode,
-        });
-        if (computed === venueCode) {
-          debug("menus fallback resolved", { businessId, localId: data.localId });
-          return {
-            businessId,
-            localId: data.localId,
-            venueCode,
-            timeZone: data.timeZone || data.timezone,
-          };
-        }
-      }
-      debug("menus fallback unresolved");
-    } catch (error) {
-      console.error("Error resolving venue code from Firestore:", error);
-    }
-  }
-
-  if (venueCode === mockVenueCode) {
-    debug("mock fallback resolved");
     return {
-      businessId: MOCK_BUSINESS_ID,
-      localId: MOCK_LOCAL_ID,
+      businessId: decoded.businessId,
+      localId: decoded.localId,
       venueCode,
     };
   }
 
+  // ===============================
+  // 2️⃣ 🔥 MOCK FALLBACK (CRITICO per dev)
+  // ===============================
+  try {
+    const decodedRaw = atob(venueCode);
+    const [businessId, localId] = decodedRaw.split("|");
+
+    if (businessId && localId) {
+      debug("✅ decoded (mock fallback)", {
+        businessId,
+        localId,
+      });
+
+      return {
+        businessId,
+        localId,
+        venueCode,
+      };
+    }
+  } catch (e) {
+    debug("mock decode failed", e);
+  }
+
+  // ===============================
+  // 3️⃣ LEGACY SUPPORT (vecchio hash)
+  // ===============================
+  if (VENUE_CODE_REGEX.test(venueCode)) {
+    debug("legacy code detected");
+
+    if (venueCode === mockVenueCode) {
+      debug("mock legacy resolved");
+
+      return {
+        businessId: MOCK_BUSINESS_ID,
+        localId: MOCK_LOCAL_ID,
+        venueCode,
+      };
+    }
+
+    debug("legacy code not resolvable without DB");
+  }
+
+  // ===============================
+  // ❌ FAIL
+  // ===============================
   debug("resolve failed");
+
   return null;
 }
